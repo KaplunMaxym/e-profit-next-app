@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {signOut, useSession} from "next-auth/react";
 import {useSearchParams} from "next/navigation";
+import variables from '../styles/variables.module.scss'
 
 export default function Home() {
   const session = useSession()
