@@ -1,10 +1,9 @@
 "use client";
-
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import type { FormEventHandler } from "react";
 
-const SignInForm = () => {
+export const SignInForm = () => {
     const router = useRouter();
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
@@ -18,11 +17,8 @@ const SignInForm = () => {
             redirect: false,
         });
 
-        console.log(res)
         if (res && !res.error) {
             router.push("/");
-        } else {
-            console.log(res);
         }
     };
 
@@ -34,5 +30,3 @@ const SignInForm = () => {
         </form>
     );
 };
-
-export { SignInForm };
