@@ -1,6 +1,5 @@
 import type { AuthOptions, User } from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
-// import {A} from 'next-auth/providers'
 import { users } from '@/data/users';
 
 export const authConfig: AuthOptions = {
@@ -14,6 +13,7 @@ export const authConfig: AuthOptions = {
                 if (!credentials?.email || !credentials.password) return null;
 
                 const currentUser = users.find(user => user.email === credentials.email)
+                console.log(currentUser)
 
                 if (currentUser && currentUser.password === credentials.password) {
                     const { password, ...userWithoutPass } = currentUser;
@@ -26,6 +26,6 @@ export const authConfig: AuthOptions = {
         })
     ],
     pages: {
-        signIn: '/signin'
+        signIn: '/authorizatin'
     }
 }
