@@ -1,11 +1,11 @@
 import React from 'react';
-import {SignInForm} from "@/modules/authorization/components/SignInForm";
+import {LogInForm} from "@/modules/authorization/components/LogInForm";
 
 const Auth = () => {
     return (
         <div className="stack">
             <h1>Authorization</h1>
-            <SignInForm/>
+            <LogInForm/>
         </div>
     );
 };

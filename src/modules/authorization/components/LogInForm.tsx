@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import type { FormEventHandler } from "react";
 
-export const SignInForm = () => {
+export const LogInForm = () => {
     const router = useRouter();
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
@@ -26,7 +26,7 @@ export const SignInForm = () => {
         <form onSubmit={handleSubmit} className="login-form">
             <input type="email" name="email" required />
             <input type="password" name="password" required />
-            <button type="submit">Sign In</button>
+            <button type="submit">Log In</button>
         </form>
     );
 };
