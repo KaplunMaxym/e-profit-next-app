@@ -1,11 +1,8 @@
-export interface IReg {
-    category_id: number
+export interface ILog {
     email: string;
     password: string;
-    password_confirmation: string;
-    agreement: string;
 }
-export interface IRegResponse {
+export interface ILogResponse {
     "success": true,
     "code": number | null,
     "email": "vsev.diachun2002@gmail.com",
