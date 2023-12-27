@@ -2,6 +2,9 @@
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import type { FormEventHandler } from "react";
+import Logo from "@/modules/authorization/assets/svg/Logo";
+import s from '@/modules/authorization/styles/auth.module.scss'
+
 export const LogInForm = () => {
     const router = useRouter();
 
@@ -20,10 +23,16 @@ export const LogInForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="login-form">
-            <input type="email" name="email" required />
-            <input type="password" name="password" required />
-            <button type="submit">Log In</button>
-        </form>
+        <div className={s.container}>
+            <div className={s.container__div}>
+                <Logo className={s.logoSvg} />
+                <div className={s.textEnterToSite}>Увійдіть на сайт</div>
+                <form className={s.authForm} onSubmit={handleSubmit}>
+                    <input type="email" name="email" required/>
+                    <input type="password" name="password" required/>
+                    <button type="submit">Увійти</button>
+                </form>
+            </div>
+        </div>
     );
 };

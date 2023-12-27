@@ -1,3 +1,3 @@
-import {StatusAuthorization} from "@/modules/main/components/StatusAuthorization";
+import {StatusAuthorization} from "@/modules/main/components";
 
 export {StatusAuthorization}

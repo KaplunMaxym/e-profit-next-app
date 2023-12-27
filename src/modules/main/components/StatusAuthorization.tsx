@@ -3,7 +3,7 @@ import Link from "next/link";
 import {signOut, useSession} from "next-auth/react";
 
 export const StatusAuthorization = () => {
-    const session = useSession()
+    const session: any = useSession()
     console.log(session)
 
     return (

@@ -1,2 +1,2 @@
-import {SignInForm} from '@/modules/registration/components/SignInForm'
+import {SignInForm} from '@/modules/registration/components'
 export {SignInForm}
