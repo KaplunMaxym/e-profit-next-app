@@ -3,8 +3,8 @@ export interface ILog {
     password: string;
 }
 export interface ILogResponse {
-    "success": true,
-    "code": number | null,
-    "email": "vsev.diachun2002@gmail.com",
-    "message": "verification code send."
+    "success": true;
+    "code": number | null;
+    "email": "vsev.diachun2002@gmail.com";
+    "message": "verification code send.";
 }

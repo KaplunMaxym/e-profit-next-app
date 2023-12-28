@@ -1,8 +1,11 @@
-export interface IResponse__email {
+interface IResponse__emailData {
     success: boolean;
     code: number;
     token: string;
     category_id: number;
+}
+export interface IResponse__email{
+    email: IResponse__emailData;
 }
 
 export interface Interface {

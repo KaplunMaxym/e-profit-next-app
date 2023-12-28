@@ -4,7 +4,7 @@ import './globals.css'
 import {ProvidersSession} from "@/utilities/ProvidersSession";
 import React from "react";
 import {StoreProvider} from "@/store/StoreProvider";
-
+require('dotenv').config();
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

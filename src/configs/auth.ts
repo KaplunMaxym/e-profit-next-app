@@ -1,6 +1,6 @@
 import type { AuthOptions } from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
-import {authorizationController, verificationController} from '@/configs/authControllers'
+import {authorizationService, verificationService} from "@/configs/authServices"
 import {ICredentials} from "@/configs/models/Interface";
 
 export const authConfig: AuthOptions = {
@@ -15,9 +15,9 @@ export const authConfig: AuthOptions = {
             async authorize(credentials: ICredentials) {
                 if (!credentials?.email) return null;
                 if (credentials.email && credentials.verification_code === undefined && credentials.password)
-                    return await authorizationController({credentials});
+                    return await authorizationService({credentials});
                 if (credentials.email && credentials.verification_code && credentials.password === undefined)
-                    return await verificationController({credentials});
+                    return await verificationService({credentials});
                 return null
             }
         })
