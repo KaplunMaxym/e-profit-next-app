@@ -3,8 +3,6 @@ import {FormEvent} from "react";
 import {useRouter, useSearchParams} from 'next/navigation'
 import {useAppDispatch, useAppSelector} from "@/hooks/useAppSelector";
 import {signIn} from "next-auth/react";
-import {verificationFetch} from "@/modules/verification/api/verificationFetch";
-import {IVerify} from "@/modules/verification/models/IVerify";
 import {userSlice} from "@/store/reducers/UserSlice";
 
 export const Verification = () => {
