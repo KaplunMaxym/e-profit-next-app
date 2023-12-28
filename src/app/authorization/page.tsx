@@ -1,6 +1,6 @@
-import {Auth} from "@/modules/authorization";
+import {LogInForm} from "@/modules/authorization";
 const Authorization = () => {
-    return <Auth />
+    return <LogInForm />
 };
 
 export default Authorization;
