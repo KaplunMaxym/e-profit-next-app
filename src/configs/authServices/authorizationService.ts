@@ -1,5 +1,5 @@
-import {ILogResponse} from "@/modules/authorization/models/ILog";
-import {ICredentialsAuth} from "@/configs/models/Interface";
+import {ILogResponse} from "@/models/models/ILog";
+import {ICredentialsAuth} from "@/models/config/Interface";
 import {makeRequestService} from "@/services/makeRequestService";
 
 export const authorizationService = async ({credentials}: {credentials: ICredentialsAuth}) => {

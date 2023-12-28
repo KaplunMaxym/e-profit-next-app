@@ -1,7 +1,7 @@
 import type { AuthOptions } from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 import {authorizationService, verificationService} from "@/configs/authServices"
-import {ICredentials} from "@/configs/models/Interface";
+import {ICredentials} from "@/models/config/Interface";
 
 export const authConfig: AuthOptions = {
     providers: [
@@ -23,7 +23,7 @@ export const authConfig: AuthOptions = {
         })
     ],
     pages: {
-        signIn: '/verification'
+        signIn: '/VerificationForm'
     },
     session: {
         // Термін дії сесії в секундах (4 дні = 4 * 24 * 60 * 60 секунд)
