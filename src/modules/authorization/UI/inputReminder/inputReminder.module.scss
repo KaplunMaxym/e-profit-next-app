@@ -1,0 +1,21 @@
+.container {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.spanInputReminder {
+  display: flex;
+  align-items: center;
+}
+
+.inputRemindMe {
+  font-size: 13px;
+}
+
+.forgetPassword {
+  text-decoration: underline;
+  font-size: 13px;
+}

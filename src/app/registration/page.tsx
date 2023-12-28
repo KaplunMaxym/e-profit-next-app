@@ -1,7 +1,7 @@
-import {SignInForm2} from "@/modules/registration";
+import {SignInForm} from "@/modules/registration";
 
-const Registration = () => {
-    return <SignInForm2 />
+const Page = () => {
+    return <SignInForm />
 };
 
-export default Registration;
+export default Page;
