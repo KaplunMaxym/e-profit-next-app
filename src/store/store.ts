@@ -1,9 +1,9 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {userSlice} from "@/store/reducers/UserSlice";
+import userReducer from "@/store/reducers/UserSlice";
 import {eprofiAPI} from "@/services/eprofiService";
 
 const rootReducer = combineReducers({
-    userSlice,
+    userReducer,
     [eprofiAPI.reducerPath]: eprofiAPI.reducer
 })
 
