@@ -1,6 +1,6 @@
 import axios from "axios";
-import {IVerify} from "@/modules/verification/models/IVerify";
-import {Interface, ICredentialsVerify} from "@/configs/models/Interface";
+import {IVerify} from "@/models/verification/IVerify";
+import {Interface, ICredentialsVerify} from "@/models/config/Interface";
 
 export const verificationService = async ({credentials}: {credentials: ICredentialsVerify}) => {
     const verificationFetch = async ({email, verification_code}: IVerify) => {

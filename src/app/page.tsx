@@ -1,4 +1,4 @@
-import {StatusAuthorization} from "@/modules/main";
+import {StatusAuthorization} from "@/modules/main/StatusAuthorization";
 
 export default function Home() {
   return <StatusAuthorization />
