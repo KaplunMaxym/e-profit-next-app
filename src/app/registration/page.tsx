@@ -1,4 +1,4 @@
-import {SignInForm} from "@/modules/registration";
+import {SignInForm} from "@/modules/SignInForm/SignInForm";
 
 const Page = () => {
     return <SignInForm />

@@ -1,7 +1,7 @@
-import {Verification} from "@/modules/verification";
+import {VerificationForm} from "@/modules/VerificationForm/VerificationForm";
 
 const Page = () => {
-    return <Verification />
+    return <VerificationForm />
 };
 
 export default Page;
