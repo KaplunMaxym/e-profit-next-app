@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import {signIn, useSession} from "next-auth/react";
 import type { FormEventHandler } from "react";
 import s from '@/modules/LoginForm/loginForm.module.scss'
-import {Input, Button, Label, InputReminder} from "@/UI";
+import {Input, ButtonYellow, Label, InputReminder, ButtonTransparent} from "@/UI";
 import {logoMain} from '@/assets'
 import Image from "next/image";
 
@@ -38,8 +38,10 @@ const LoginForm = () => {
                     <Label>Пароль</Label>
                     <Input type="password" name="password"/>
                     <InputReminder type='checkbox'/>
-                    <Button type="submit" color={'#FFF135'}>Увійти</Button>
+                    <ButtonYellow type="submit">Увійти</ButtonYellow>
+                    <ButtonTransparent>Зареєструватися</ButtonTransparent>
                 </form>
+
             </div>
         </div>
     );

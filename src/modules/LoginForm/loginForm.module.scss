@@ -9,7 +9,7 @@
     height: 100vh;
     width: 420px;
     display: flex;
-    gap: 50px;
+    //gap: 50px;
     flex-direction: column;
     justify-content: center;
 }
@@ -25,7 +25,7 @@
   //
   //  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   //}
-  //button {
+  //buttonYellow {
   //  padding: 10px;
   //  border-radius: 10px;
   //  background: #FFF135;
@@ -35,8 +35,10 @@
 .logoSvg {
   display: flex;
   justify-content: center;
+  margin-bottom: 80px;
 }
 .textEnterToSite {
   display: flex;
   justify-content: center;
+  margin-bottom: 90px;
 }
