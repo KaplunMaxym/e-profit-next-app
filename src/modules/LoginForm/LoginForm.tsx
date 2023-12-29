@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import {signIn, useSession} from "next-auth/react";
 import type { FormEventHandler } from "react";
 import s from '@/modules/LoginForm/loginForm.module.scss'
 import {Input, Button, Label, InputReminder} from "@/UI";
@@ -9,7 +9,10 @@ import Image from "next/image";
 
 const LoginForm = () => {
     const router = useRouter();
-
+    const session: any = useSession()
+    if(session?.data?.user?.email?.category_id === 3){
+        router.push("/education");
+    }
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
@@ -21,10 +24,9 @@ const LoginForm = () => {
         console.log(response)
         if (response.ok === true) {
             console.log(response)
-            router.push("/");
+
         }
     };
-
     return (
         <div className={s.container}>
             <div className={s.container__div}>
