@@ -23,7 +23,7 @@ export const authConfig: AuthOptions = {
         })
     ],
     pages: {
-        signIn: '/VerificationForm'
+        signIn: '/authorization'
     },
     session: {
         // Термін дії сесії в секундах (4 дні = 4 * 24 * 60 * 60 секунд)
