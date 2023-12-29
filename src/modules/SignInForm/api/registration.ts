@@ -8,7 +8,7 @@ export const registrationFetch = async ({category_id, email, password, password_
         'Content-Type': 'application/json',
     };
     return await axios.post(
-        'http://127.0.0.1:8000/api/register-web',
+        'http://testapi.siteweb.org.ua/api/register-web',
         {category_id, email, password, password_confirmation, agreement},
         {headers},
     );
