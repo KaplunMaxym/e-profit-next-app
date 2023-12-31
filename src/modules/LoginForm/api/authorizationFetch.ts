@@ -8,7 +8,7 @@ export const authorizationFetch = async ({email, password}: ILog) => {
         'Content-Type': 'application/json',
     };
     return await axios.post(
-        'http://127.0.0.1:8000/api/login-web',
+        'http://testapi.siteweb.org.ua/api/login-web',
         {email, password},
         {headers},
     );

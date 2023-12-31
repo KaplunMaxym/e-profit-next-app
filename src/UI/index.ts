@@ -1,6 +1,7 @@
 import Input from "@/UI/input/Input";
-import Button from '@/UI/button/Button'
+import ButtonYellow from '@/UI/buttonYellow/ButtonYellow'
 import Label from '@/UI/label/Label'
 import InputReminder from '@/UI/inputReminder/InputReminder'
+import ButtonTransparent from '@/UI/buttonTransparent/ButtonTransparent'
 
-export {Input, Button, Label, InputReminder}
+export {Input, ButtonYellow, Label, InputReminder, ButtonTransparent}

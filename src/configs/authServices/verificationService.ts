@@ -9,7 +9,7 @@ export const verificationService = async ({credentials}: {credentials: ICredenti
             'Content-Type': 'application/json',
         };
         return await axios.post(
-            'http://127.0.0.1:8000/api/verification-web',
+            'http://testapi.siteweb.org.ua/api/verification-web',
             {email, verification_code},
             {headers},
         );
