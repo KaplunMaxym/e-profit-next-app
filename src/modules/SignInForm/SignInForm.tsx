@@ -1,15 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
-import type {FormEventHandler, MouseEventHandler} from "react";
+import type {FormEventHandler} from "react";
 import {registrationFetch} from "@/modules/SignInForm/api/registration";
 import {IReg} from "@/modules/SignInForm/models/IReg";
 import {useAppDispatch} from "@/hooks/useAppSelector";
 import {userSlice} from "@/store/reducers/UserSlice";
-import {ButtonYellow, Input, InputReminder, Label, PolicyCheckBox} from "@/UI";
+import {ButtonYellow, Input, Label, PolicyCheckBox, Category, MainText, ImageLogo, ButtonTransparent} from "@/UI";
 import s from '@/modules/SignInForm/signInForm.module.scss'
-import {logoMain} from '@/assets'
+import {electricPole, electricPole2} from '@/assets'
 import Image from "next/image";
-import Category from "../../UI/category/Category";
+import category from "@/UI/category/Category";
+import ElectricPole from "../../UI/electricPole/ElectricPole";
 
 export const SignInForm = () => {
     'use client';
@@ -20,10 +21,9 @@ export const SignInForm = () => {
     const handleSubmit: FormEventHandler<HTMLFormElement> | undefined = async (event) => {
         'use client';
         event.preventDefault();
-        console.log(123);
         const formData = new FormData(event.currentTarget);
         const res = await registrationFetch({
-            category_id: 2,
+            category_id: formData.get('categories'),
             email: formData.get('email'),
             password: formData.get('password'),
             password_confirmation: formData.get('password_confirmation'),
@@ -43,34 +43,32 @@ export const SignInForm = () => {
     ]
 
     return (
-        <>
-            <div className={s.container}>
-                <div className={s.container__div}>
-                    <div className={s.logoSvg}><Image src={logoMain} alt={'logo'} priority/></div>
-                    <div className={s.textEnterToSite}>Створіть профіль</div>
-                    <form className={s.authForm} onSubmit={handleSubmit}>
+        <div className={s.container}>
+            <div className={s.containerReg}>
+                <div className={s.containerReg__div}>
+                    <ImageLogo marginBottom={16} />
+                    <MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>
+                    <MainText fontSize={20}>Створіть профіль</MainText>
+                    <form className={s.authForm} onSubmit={(event) => handleSubmit(event)}>
                         <Label>Категорії</Label>
-                        <Category data={data} />
+                        <Category name={'categories'} data={data} />
                         <Label>Електронна пошта</Label>
                         <Input type="email" name="email"/>
+                        <Label>Wertwert1@%</Label>
                         <Label>Пароль</Label>
                         <Input type="password" name="password"/>
                         <Label>Підтвердьте пароль</Label>
-                        <Input type="password" name="password"/>
-                        {/*<InputReminder type='checkbox'/>*/}
+                        <Input type="password" name="password_confirmation"/>
                         <PolicyCheckBox />
                         <ButtonYellow type="submit">Зареєструватися</ButtonYellow>
-                        {/*<ButtonTransparent>Зареєструватися</ButtonTransparent>*/}
                     </form>
-
+                    <ButtonTransparent navigate={'/authorization'}>Я вже зареєстрований</ButtonTransparent>
                 </div>
             </div>
-            <form className="login-form" onSubmit={(event) => handleSubmit(event)}>
-                <input type="email" name="email" required/>
-                <input type="password" name="password" required/>
-                <input type="password" name="password_confirmation" required/>
-                <button type="submit">Sign In</button>
-            </form>
-        </>
+            <ElectricPole />
+            {/*<div className={s.containerElectricPole}>*/}
+            {/*    <Image className={s.electricPole} src={electricPole2} alt={'electricPole'} />*/}
+            {/*</div>*/}
+        </div>
     );
 };

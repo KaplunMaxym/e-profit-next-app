@@ -1,9 +1,14 @@
 'use client';
 import {FormEvent} from "react";
-import {useRouter, useSearchParams} from 'next/navigation'
+import {useRouter} from 'next/navigation'
 import {useAppDispatch, useAppSelector} from "@/hooks/useAppSelector";
 import {signIn} from "next-auth/react";
 import {userSlice} from "@/store/reducers/UserSlice";
+import s from "@/modules/VerificationForm/verificationForm.module.scss";
+import Image from "next/image";
+import {electricPole} from "@/assets";
+import MainText from "../../UI/mainText/MainText";
+import {ButtonYellow, ImageLogo, Input, Label} from "@/UI";
 
 export const VerificationForm = () => {
     const router = useRouter()
@@ -28,11 +33,22 @@ export const VerificationForm = () => {
     }
 
     return (
-        <form className="login-form"
-              onSubmit={(event) => handleSubmit(event)
-        }>
-            <input type="text" name="verification_code" required/>
-            <button type="submit">Sign In</button>
-        </form>
+        <div className={s.container}>
+            <div className={s.containerVer}>
+                <div className={s.containerVer__div}>
+                    <ImageLogo marginBottom={30} />
+                    {/*<MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>*/}
+                    <MainText fontSize={20} fontWeight={400}>Верифікація</MainText>
+                    <form className={s.authForm} onSubmit={(event) => handleSubmit(event)}>
+                        <Label>Код підтвердження</Label>
+                        <Input type="text" name="verification_code"/>
+                        <ButtonYellow type="submit">Продовжити</ButtonYellow>
+                    </form>
+                </div>
+            </div>
+            <div className={s.containerElectricPole}>
+                <Image className={s.electricPole} src={electricPole} alt={'electricPole'} />
+            </div>
+        </div>
     );
 };

@@ -4,9 +4,10 @@ import {signIn, useSession} from "next-auth/react";
 import {FormEventHandler, useEffect} from "react";
 import s from '@/modules/LoginForm/loginForm.module.scss'
 import {Input, ButtonYellow, Label, InputReminder, ButtonTransparent} from "@/UI";
-import {logoMain} from '@/assets'
+import {electricPole} from '@/assets'
 import Image from "next/image";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
+import ImageLogo from "../../UI/imageLogo/ImageLogo";
 
 const LoginForm = () => {
     const router: AppRouterInstance = useRouter();
@@ -33,20 +34,26 @@ const LoginForm = () => {
     };
     return (
         <div className={s.container}>
-            <div className={s.container__div}>
-                <div className={s.logoSvg}><Image src={logoMain} alt={'logo'} priority /></div>
-                <div className={s.textEnterToSite}>Увійдіть на сайт</div>
-                <form className={s.authForm} onSubmit={handleSubmit}>
-                    <Label>Електронна пошта</Label>
-                    <Label>vsev.diachun2002@gmail.com</Label>
-                    <Input type="email" name="email"/>
-                    <Label>Пароль</Label>
-                    <Label>Wertwert1@%</Label>
-                    <Input type="password" name="password"/>
-                    <InputReminder type='checkbox'/>
-                    <ButtonYellow type="submit">Увійти</ButtonYellow>
-                </form>
-                <ButtonTransparent>Зареєструватися</ButtonTransparent>
+            <div className={s.containerLog}>
+                <div className={s.containerLog__div}>
+                    <ImageLogo marginBottom={80} />
+                    <div className={s.textEnterToSite}>Увійдіть на сайт</div>
+                    <form className={s.authForm} onSubmit={handleSubmit}>
+                        <Label>Електронна пошта</Label>
+                        <Label>vsev.diachun2002@gmail.com</Label>
+                        <Input type="email" name="email"/>
+                        <Label>Пароль</Label>
+                        <Label>Wertwert1@%</Label>
+                        <Input type="password" name="password"/>
+                        <InputReminder type='checkbox'/>
+                        <ButtonYellow type="submit">Увійти</ButtonYellow>
+                    </form>
+                    <ButtonTransparent navigate={'/registration'}>Зареєструватися</ButtonTransparent>
+                </div>
+
+            </div>
+            <div className={s.containerElectricPole}>
+                <Image className={s.electricPole} src={electricPole} alt={'electricPole'} priority={true}/>
             </div>
         </div>
     );

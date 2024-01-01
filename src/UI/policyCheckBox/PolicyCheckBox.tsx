@@ -9,7 +9,7 @@ const PolicyCheckBox: FC<IInput> = ({type, name}) => {
         <div className={s.container}>
             <span className={s.spanInputReminder}>
                 <input id={'check'} className={s.inputRemindMe} type={"checkbox"} name={name} />
-                <label htmlFor={'check'} className={s.checkText}>Я прочитав і приймаю
+                <label htmlFor={'check'} className={s.checkText}> Я прочитав і приймаю
                     <span className={s.forgetPassword}> Політику конфіденціальності</span>
                 </label>
             </span>

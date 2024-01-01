@@ -4,4 +4,5 @@ export interface IData {
 }
 export interface ICategories {
     data: IData[],
+    name: string,
 }

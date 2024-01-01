@@ -5,5 +5,19 @@ import InputReminder from '@/UI/inputReminder/InputReminder'
 import ButtonTransparent from '@/UI/buttonTransparent/ButtonTransparent'
 import PolicyCheckBox from '@/UI/policyCheckBox/PolicyCheckBox'
 import Category from '@/UI/category/Category'
+import MainText from '@/UI/mainText/MainText'
+import ImageLogo from '@/UI/imageLogo/ImageLogo'
+import ElectricPole from '@/UI/electricPole/ElectricPole'
 
-export {Input, ButtonYellow, Label, InputReminder, ButtonTransparent, PolicyCheckBox, Category}
+export {
+    Input,
+    ButtonYellow,
+    Label,
+    InputReminder,
+    ButtonTransparent,
+    PolicyCheckBox,
+    Category,
+    MainText,
+    ImageLogo,
+    ElectricPole,
+}
