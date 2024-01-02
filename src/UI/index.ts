@@ -1,18 +1,17 @@
-import Input from "@/UI/input/Input";
-import ButtonYellow from '@/UI/buttonYellow/ButtonYellow'
-import Label from '@/UI/label/Label'
-import InputReminder from '@/UI/inputReminder/InputReminder'
-import ButtonTransparent from '@/UI/buttonTransparent/ButtonTransparent'
-import PolicyCheckBox from '@/UI/policyCheckBox/PolicyCheckBox'
-import Category from '@/UI/category/Category'
-import MainText from '@/UI/mainText/MainText'
-import ImageLogo from '@/UI/imageLogo/ImageLogo'
-import ElectricPole from '@/UI/electricPole/ElectricPole'
-import ContainerAuth from '@/UI/pageAuth/containerAuth/ContainerAuth'
-import SubContainerAuth from '@/UI/pageAuth/subContainerAuth/SubContainerAuth'
-import ChildSubContainerAuth from '@/UI/pageAuth/childSubContainerAuth/ChildSubContainerAuth'
-import FormAuth from '@/UI/formAuth/FormAuth'
-
+import Input from "@/UI/Inputs/input/Input";
+import ButtonYellow from '@/UI/Buttons/buttonYellow/ButtonYellow'
+import Label from '@/UI/Text/label/Label'
+import InputReminder from '@/UI/Inputs/inputReminder/InputReminder'
+import ButtonTransparent from '@/UI/Buttons/buttonTransparent/ButtonTransparent'
+import PolicyCheckBox from '@/UI/Inputs/policyCheckBox/PolicyCheckBox'
+import Category from '@/UI/Inputs/category/Category'
+import MainText from '@/UI/Text/mainText/MainText'
+import ImageLogo from '@/UI/AssetsUI/imageLogo/ImageLogo'
+import ElectricPole from '@/UI/AssetsUI/electricPole/ElectricPole'
+import ContainerAuth from '@/UI/Layouts/Auth/containerAuth/ContainerAuth'
+import SubContainerAuth from '@/UI/Layouts/Auth/subContainerAuth/SubContainerAuth'
+import ChildSubContainerAuth from '@/UI/Layouts/Auth/childSubContainerAuth/ChildSubContainerAuth'
+import DigitCode from "@/UI/Inputs/digitCode/digitCode";
 export {
     Input,
     ButtonYellow,
@@ -27,5 +26,5 @@ export {
     ContainerAuth,
     SubContainerAuth,
     ChildSubContainerAuth,
-    FormAuth
+    DigitCode,
 }
