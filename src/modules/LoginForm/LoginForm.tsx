@@ -1,29 +1,29 @@
 "use client";
-import { useRouter } from "next/navigation";
+import {useSearchParams, useRouter} from "next/navigation";
 import {signIn, useSession} from "next-auth/react";
 import {FormEventHandler, useEffect} from "react";
-import s from '@/modules/LoginForm/loginForm.module.scss'
 import {
     Input,
     ButtonYellow,
     Label,
     InputReminder,
-    ButtonTransparent,
-    ContainerAuth,
-    SubContainerAuth,
-    ChildSubContainerAuth,
-    ImageLogo,
-    ElectricPole,
-    MainText, FormAuth
 } from "@/UI";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
+import FormAuth from "@/components/Form/formAuth/FormAuth";
 
 const LoginForm = () => {
     const router: AppRouterInstance = useRouter();
     const session: any = useSession()
+    const searchParams = useSearchParams()
+    const callbackUrl = searchParams.get('callbackUrl');
+    console.log(callbackUrl)
     useEffect(() => {
         if(session?.data?.user?.email?.code === 200){
-            router.push("/");
+            if(callbackUrl){
+                router.push(callbackUrl);
+            }else {
+                router.push("/");
+            }
         }
     }, [session, router]);
     console.log(session)
@@ -36,10 +36,6 @@ const LoginForm = () => {
             redirect: false,
         });
         console.log(response)
-        if (response.ok === true) {
-            console.log(response)
-            router.push("/");
-        }
     };
     return (
         <FormAuth onSubmit={handleSubmit}>
