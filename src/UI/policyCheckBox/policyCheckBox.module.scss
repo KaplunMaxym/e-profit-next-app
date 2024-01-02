@@ -1,0 +1,21 @@
+.container {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.spanInputReminder {
+  display: flex;
+  align-items: center;
+}
+.inputRemindMe {
+  font-size: 13px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.forgetPassword {
+  color: #08987F;
+}
+.checkText {
+  font-size: 13px;
+  cursor: pointer;
+}

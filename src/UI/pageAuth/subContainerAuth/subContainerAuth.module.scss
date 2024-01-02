@@ -1,0 +1,12 @@
+.subContainerAuth {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 920px) {
+  .subContainerAuth {
+    width: 100%;
+  }
+}
