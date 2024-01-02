@@ -27,6 +27,7 @@ export const VerificationForm = () => {
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget);
+        console.log(emailByVerification, formData.get('verification_code'))
         const response = await signIn("credentials", {
             email: emailByVerification,
             verification_code: formData.get('verification_code'),
