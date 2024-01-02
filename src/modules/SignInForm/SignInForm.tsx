@@ -8,7 +8,6 @@ import {userSlice} from "@/store/reducers/UserSlice";
 import {ButtonYellow, Input, Label, PolicyCheckBox, Category, MainText, ImageLogo, ButtonTransparent, ElectricPole, ContainerAuth, SubContainerAuth, ChildSubContainerAuth, FormAuth} from "@/UI";
 
 export const SignInForm = () => {
-    'use client';
     const router = useRouter();
     const dispatch = useAppDispatch()
     const {setEmailByVerification} = userSlice.actions
@@ -38,29 +37,18 @@ export const SignInForm = () => {
     ]
 
     return (
-        <ContainerAuth>
-            <SubContainerAuth>
-                <ChildSubContainerAuth>
-                    <ImageLogo marginBottom={16} />
-                    <MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>
-                    <MainText fontSize={20}>Створіть профіль</MainText>
-                    <FormAuth onSubmit={(event) => handleSubmit(event)}>
-                        <Label>Категорії</Label>
-                        <Category name={'categories'} data={data} />
-                        <Label>Електронна пошта</Label>
-                        <Input type="email" name="email"/>
-                        <Label>Wertwert1@%</Label>
-                        <Label>Пароль</Label>
-                        <Input type="password" name="password"/>
-                        <Label>Підтвердьте пароль</Label>
-                        <Input type="password" name="password_confirmation"/>
-                        <PolicyCheckBox />
-                        <ButtonYellow type="submit">Зареєструватися</ButtonYellow>
-                    </FormAuth>
-                    <ButtonTransparent navigate={'/authorization'}>Я вже зареєстрований</ButtonTransparent>
-                </ChildSubContainerAuth>
-            </SubContainerAuth>
-            <ElectricPole />
-        </ContainerAuth>
+        <FormAuth onSubmit={(event) => handleSubmit(event)}>
+            <Label>Категорії</Label>
+            <Category name={'categories'} data={data} />
+            <Label>Електронна пошта</Label>
+            <Input type="email" name="email"/>
+            <Label>Wertwert1@%</Label>
+            <Label>Пароль</Label>
+            <Input type="password" name="password"/>
+            <Label>Підтвердьте пароль</Label>
+            <Input type="password" name="password_confirmation"/>
+            <PolicyCheckBox />
+            <ButtonYellow type="submit">Зареєструватися</ButtonYellow>
+        </FormAuth>
     );
 };
