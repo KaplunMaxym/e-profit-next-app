@@ -1,7 +1,7 @@
 "use client";
 import {useSearchParams, useRouter} from "next/navigation";
 import {signIn, useSession} from "next-auth/react";
-import {FormEventHandler, useEffect} from "react";
+import {FormEventHandler, useEffect, useState} from "react";
 import {
     Input,
     ButtonYellow,
@@ -10,13 +10,23 @@ import {
 } from "@/UI";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
 import FormAuth from "@/components/Form/formAuth/FormAuth";
+import useValidation from "@/hooks/useValidationHook/useValidationHook";
 
 const LoginForm = () => {
+    const [activeSubmitBtn, setActiveSubmitBtn] = useState(true);
+    const {errors, validateEmail} = useValidation();
     const router: AppRouterInstance = useRouter();
     const session: any = useSession()
     const searchParams = useSearchParams()
     const callbackUrl = searchParams.get('callbackUrl');
     console.log(callbackUrl)
+    useEffect(()=>{
+        if(errors.email.correct){
+            setActiveSubmitBtn(false)
+        }else{
+            setActiveSubmitBtn(true)
+        }
+    }, [errors])
     useEffect(() => {
         if(session?.data?.user?.email?.code === 200){
             if(callbackUrl){
@@ -41,12 +51,12 @@ const LoginForm = () => {
         <FormAuth onSubmit={handleSubmit}>
             <Label>Електронна пошта</Label>
             <Label>vsev.diachun2002@gmail.com</Label>
-            <Input type="email" name="email"/>
+            <Input onChange={validateEmail} error={errors.email} type="email" name="email"/>
             <Label>Пароль</Label>
             <Label>Wertwert1@%</Label>
             <Input type="password" name="password"/>
             <InputReminder type='checkbox'/>
-            <ButtonYellow type="submit">Увійти</ButtonYellow>
+            <ButtonYellow type="submit" active={activeSubmitBtn}>Увійти</ButtonYellow>
         </FormAuth>
 
     );
