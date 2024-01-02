@@ -8,7 +8,6 @@ import {userSlice} from "@/store/reducers/UserSlice";
 import {ButtonYellow, Input, Label, PolicyCheckBox, Category, MainText, ImageLogo, ButtonTransparent, ElectricPole, ContainerAuth, SubContainerAuth, ChildSubContainerAuth, FormAuth} from "@/UI";
 
 export const SignInForm = () => {
-    'use client';
     const router = useRouter();
     const dispatch = useAppDispatch()
     const {setEmailByVerification} = userSlice.actions
