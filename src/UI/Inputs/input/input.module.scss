@@ -1,14 +1,34 @@
+@import '@/styles/variables.scss';
 .input {
   padding: 10px;
   margin-bottom: 15px;
+  width: 100%;
 
   border-radius: 9px;
-  border: 1px solid #AEAEAE;
+  border: 1px solid $semiGray;
   box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 
   background: #FFF;
-}
 
-.notCorrect{
-  border: 1px solid #bb0000;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10/11 */
+  user-select: none; /* Стандарт */
+
+}
+.input:focus {
+  outline: none;
+}
+.container{
+  position: relative;
+  z-index: 2;
+}
+.img {
+  position: absolute;
+  //left: -20px;
+  z-index: 3;
+  transform: translate(-30px, 7px);
+}
+.errorBorder {
+  border-color: $redColor;
 }

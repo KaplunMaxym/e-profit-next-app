@@ -1,9 +1,14 @@
+//@import '../../../styles/variables.scss';.label {
+@import '@/styles/variables.scss';
 .label {
-  color: #262626;
+  color: $grayDark;
 
   //font-family: Inter;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+.center {
+  margin: 0 auto;
 }
