@@ -1,5 +1,5 @@
 export interface IReg {
-    category_id: number
+    category_id: string
     email: string;
     password: string;
     password_confirmation: string;

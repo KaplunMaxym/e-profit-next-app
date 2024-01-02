@@ -1,9 +1,21 @@
 'use client';
 import {FormEvent} from "react";
-import {useRouter, useSearchParams} from 'next/navigation'
+import {useRouter} from 'next/navigation'
 import {useAppDispatch, useAppSelector} from "@/hooks/useAppSelector";
 import {signIn} from "next-auth/react";
 import {userSlice} from "@/store/reducers/UserSlice";
+import MainText from "../../UI/mainText/MainText";
+import {
+    ButtonYellow,
+    ChildSubContainerAuth,
+    ContainerAuth,
+    FormAuth,
+    ImageLogo,
+    Input,
+    Label,
+    SubContainerAuth,
+    ElectricPole
+} from "@/UI";
 
 export const VerificationForm = () => {
     const router = useRouter()
@@ -28,11 +40,20 @@ export const VerificationForm = () => {
     }
 
     return (
-        <form className="login-form"
-              onSubmit={(event) => handleSubmit(event)
-        }>
-            <input type="text" name="verification_code" required/>
-            <button type="submit">Sign In</button>
-        </form>
+        <ContainerAuth>
+            <SubContainerAuth>
+                <ChildSubContainerAuth>
+                    <ImageLogo marginBottom={30} />
+                    {/*<MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>*/}
+                    <MainText fontSize={20} fontWeight={400}>Верифікація</MainText>
+                    <FormAuth onSubmit={(event) => handleSubmit(event)}>
+                        <Label>Код підтвердження</Label>
+                        <Input type="text" name="verification_code"/>
+                        <ButtonYellow type="submit">Продовжити</ButtonYellow>
+                    </FormAuth>
+                </ChildSubContainerAuth>
+            </SubContainerAuth>
+            <ElectricPole />
+        </ContainerAuth>
     );
 };

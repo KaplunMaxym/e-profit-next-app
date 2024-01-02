@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  height: 100vh;
+  //width: 100%;
+}
+//.containerElectricPole {
+//  width: 50%;
+//  display: flex;
+//  justify-content: center;
+//  overflow: hidden;
+//}
+
+.containerReg {
+  display: flex;
+  width: 50%;
+  //height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__div {
+    height: 100vh;
+    width: 100%;
+    min-width: 342px;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+//.electricPole {
+//  height: 100%;
+//  //width: 50%;
+//}
+.authForm {
+  display: flex;
+  flex-direction: column;
+}
+//.logoSvg {
+//  display: flex;
+//  justify-content: center;
+//  margin-bottom: 16px;
+//}
+//.textEnterToSite {
+//  display: flex;
+//  justify-content: center;
+//  margin-bottom: 90px;
+//  font-weight: 600;
+//  font-size: 24px;
+//}
+
+@media (max-width: 920px) {
+  .containerReg {
+    width: 100%;
+    &__div {
+      width: 90%;
+    }
+  }
+}
