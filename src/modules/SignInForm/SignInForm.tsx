@@ -5,7 +5,8 @@ import {registrationFetch} from "@/modules/SignInForm/api/registration";
 import {IReg} from "@/modules/SignInForm/models/IReg";
 import {useAppDispatch} from "@/hooks/useAppSelector";
 import {userSlice} from "@/store/reducers/UserSlice";
-import {ButtonYellow, Input, Label, PolicyCheckBox, Category, MainText, ImageLogo, ButtonTransparent, ElectricPole, ContainerAuth, SubContainerAuth, ChildSubContainerAuth, FormAuth} from "@/UI";
+import {ButtonYellow, Input, Label, PolicyCheckBox, Category} from "@/UI";
+import FormAuth from "@/components/Form/formAuth/FormAuth";
 
 export const SignInForm = () => {
     const router = useRouter();

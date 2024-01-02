@@ -4,26 +4,24 @@ import {useRouter} from 'next/navigation'
 import {useAppDispatch, useAppSelector} from "@/hooks/useAppSelector";
 import {signIn} from "next-auth/react";
 import {userSlice} from "@/store/reducers/UserSlice";
-import MainText from "../../UI/mainText/MainText";
+import MainText from "@/UI/Text/mainText/MainText";
 import {
     ButtonYellow,
     ChildSubContainerAuth,
     ContainerAuth,
-    FormAuth,
     ImageLogo,
-    Input,
     Label,
     SubContainerAuth,
+    DigitCode,
     ElectricPole
 } from "@/UI";
+import FormAuth from "@/components/Form/formAuth/FormAuth";
 
 export const VerificationForm = () => {
     const router = useRouter()
     const {emailByVerification} = useAppSelector(state => state.userReducer)
     const {setEmailByVerification} = userSlice.actions
     const dispatch = useAppDispatch()
-
-
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget);
@@ -39,7 +37,6 @@ export const VerificationForm = () => {
             router.push("/");
         }
     }
-
     return (
         <ContainerAuth>
             <SubContainerAuth>
@@ -49,7 +46,7 @@ export const VerificationForm = () => {
                     <MainText fontSize={20} fontWeight={400}>Верифікація</MainText>
                     <FormAuth onSubmit={(event) => handleSubmit(event)}>
                         <Label>Код підтвердження</Label>
-                        <Input type="text" name="verification_code"/>
+                        <DigitCode name="verification_code"/>
                         <ButtonYellow type="submit">Продовжити</ButtonYellow>
                     </FormAuth>
                 </ChildSubContainerAuth>
