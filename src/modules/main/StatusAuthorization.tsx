@@ -8,7 +8,7 @@ export const StatusAuthorization = () => {
 
     return (
         <>
-            <div>
+            <div style={{marginTop: 20}}>
                 {session?.data ? (
                     <Link href="#" className={'btn'} onClick={() => signOut({callbackUrl: "/"})}>
                         Sign out

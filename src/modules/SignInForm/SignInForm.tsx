@@ -1,10 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation";
-import type {FormEventHandler, MouseEventHandler} from "react";
+import type {FormEventHandler} from "react";
 import {registrationFetch} from "@/modules/SignInForm/api/registration";
 import {IReg} from "@/modules/SignInForm/models/IReg";
 import {useAppDispatch} from "@/hooks/useAppSelector";
 import {userSlice} from "@/store/reducers/UserSlice";
+import {ButtonYellow, Input, Label, PolicyCheckBox, Category, MainText, ImageLogo, ButtonTransparent, ElectricPole, ContainerAuth, SubContainerAuth, ChildSubContainerAuth, FormAuth} from "@/UI";
 
 export const SignInForm = () => {
     'use client';
@@ -15,10 +16,9 @@ export const SignInForm = () => {
     const handleSubmit: FormEventHandler<HTMLFormElement> | undefined = async (event) => {
         'use client';
         event.preventDefault();
-        console.log(123);
         const formData = new FormData(event.currentTarget);
         const res = await registrationFetch({
-            category_id: 2,
+            category_id: formData.get('categories'),
             email: formData.get('email'),
             password: formData.get('password'),
             password_confirmation: formData.get('password_confirmation'),
@@ -31,13 +31,36 @@ export const SignInForm = () => {
             router.push('/verification');
         }
     };
+    const data: {id: number, category: string}[] = [
+        {id: 1, category: 'Робітник'},
+        {id: 2, category: 'Компанія'},
+        {id: 3, category: 'Навчальний центр'},
+    ]
 
     return (
-        <form className="login-form" onSubmit={(event) => handleSubmit(event)}>
-            <input type="email" name="email" required/>
-            <input type="password" name="password" required/>
-            <input type="password" name="password_confirmation" required/>
-            <button type="submit">Sign In</button>
-        </form>
+        <ContainerAuth>
+            <SubContainerAuth>
+                <ChildSubContainerAuth>
+                    <ImageLogo marginBottom={16} />
+                    <MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>
+                    <MainText fontSize={20}>Створіть профіль</MainText>
+                    <FormAuth onSubmit={(event) => handleSubmit(event)}>
+                        <Label>Категорії</Label>
+                        <Category name={'categories'} data={data} />
+                        <Label>Електронна пошта</Label>
+                        <Input type="email" name="email"/>
+                        <Label>Wertwert1@%</Label>
+                        <Label>Пароль</Label>
+                        <Input type="password" name="password"/>
+                        <Label>Підтвердьте пароль</Label>
+                        <Input type="password" name="password_confirmation"/>
+                        <PolicyCheckBox />
+                        <ButtonYellow type="submit">Зареєструватися</ButtonYellow>
+                    </FormAuth>
+                    <ButtonTransparent navigate={'/authorization'}>Я вже зареєстрований</ButtonTransparent>
+                </ChildSubContainerAuth>
+            </SubContainerAuth>
+            <ElectricPole />
+        </ContainerAuth>
     );
 };

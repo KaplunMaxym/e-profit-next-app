@@ -1,5 +1,5 @@
 import s from '@/UI/input/input.module.scss'
-import {FC} from "react";
+import type {FC} from "react";
 interface IInput {
     type: string;
     name?: string;

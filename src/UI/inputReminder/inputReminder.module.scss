@@ -12,10 +12,17 @@
 }
 
 .inputRemindMe {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.label {
+  cursor: pointer;
   font-size: 13px;
 }
 
 .forgetPassword {
   text-decoration: underline;
   font-size: 13px;
+  cursor: pointer;
 }
