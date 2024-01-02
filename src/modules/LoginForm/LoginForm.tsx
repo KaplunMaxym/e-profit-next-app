@@ -42,26 +42,17 @@ const LoginForm = () => {
         }
     };
     return (
-        <ContainerAuth>
-            <SubContainerAuth>
-                <ChildSubContainerAuth>
-                    <ImageLogo marginBottom={80} />
-                    <MainText fontSize={20}>Увійдіть на сайт</MainText>
-                    <FormAuth onSubmit={handleSubmit}>
-                        <Label>Електронна пошта</Label>
-                        <Label>vsev.diachun2002@gmail.com</Label>
-                        <Input type="email" name="email"/>
-                        <Label>Пароль</Label>
-                        <Label>Wertwert1@%</Label>
-                        <Input type="password" name="password"/>
-                        <InputReminder type='checkbox'/>
-                        <ButtonYellow type="submit">Увійти</ButtonYellow>
-                    </FormAuth>
-                    <ButtonTransparent navigate={'/registration'}>Зареєструватися</ButtonTransparent>
-                </ChildSubContainerAuth>
-            </SubContainerAuth>
-            <ElectricPole />
-        </ContainerAuth>
+        <FormAuth onSubmit={handleSubmit}>
+            <Label>Електронна пошта</Label>
+            <Label>vsev.diachun2002@gmail.com</Label>
+            <Input type="email" name="email"/>
+            <Label>Пароль</Label>
+            <Label>Wertwert1@%</Label>
+            <Input type="password" name="password"/>
+            <InputReminder type='checkbox'/>
+            <ButtonYellow type="submit">Увійти</ButtonYellow>
+        </FormAuth>
+
     );
 };
 
