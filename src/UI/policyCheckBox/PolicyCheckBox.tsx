@@ -1,5 +1,5 @@
 import s from '@/UI/policyCheckBox/policyCheckBox.module.scss'
-import {FC} from "react";
+import type {FC} from "react";
 interface IInput {
     type?: string;
     name?: string;

@@ -1,4 +1,4 @@
-import {FC} from "react";
+import type {FC} from "react";
 import {ICategories, IData} from "@/UI/category/models";
 import s from '@/UI/category/category.module.scss'
 

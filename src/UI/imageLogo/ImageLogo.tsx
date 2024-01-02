@@ -1,7 +1,7 @@
 import s from "@/UI/imageLogo/imageLogo.module.scss";
 import Image from "next/image";
 import {logoMain} from "@/assets";
-import {FC} from "react";
+import type {FC} from "react";
 
 interface IImageLogo {
     marginBottom?: number

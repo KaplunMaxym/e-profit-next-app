@@ -5,12 +5,7 @@ import {registrationFetch} from "@/modules/SignInForm/api/registration";
 import {IReg} from "@/modules/SignInForm/models/IReg";
 import {useAppDispatch} from "@/hooks/useAppSelector";
 import {userSlice} from "@/store/reducers/UserSlice";
-import {ButtonYellow, Input, Label, PolicyCheckBox, Category, MainText, ImageLogo, ButtonTransparent} from "@/UI";
-import s from '@/modules/SignInForm/signInForm.module.scss'
-import {electricPole, electricPole2} from '@/assets'
-import Image from "next/image";
-import category from "@/UI/category/Category";
-import ElectricPole from "../../UI/electricPole/ElectricPole";
+import {ButtonYellow, Input, Label, PolicyCheckBox, Category, MainText, ImageLogo, ButtonTransparent, ElectricPole, ContainerAuth, SubContainerAuth, ChildSubContainerAuth, FormAuth} from "@/UI";
 
 export const SignInForm = () => {
     'use client';
@@ -43,13 +38,13 @@ export const SignInForm = () => {
     ]
 
     return (
-        <div className={s.container}>
-            <div className={s.containerReg}>
-                <div className={s.containerReg__div}>
+        <ContainerAuth>
+            <SubContainerAuth>
+                <ChildSubContainerAuth>
                     <ImageLogo marginBottom={16} />
                     <MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>
                     <MainText fontSize={20}>Створіть профіль</MainText>
-                    <form className={s.authForm} onSubmit={(event) => handleSubmit(event)}>
+                    <FormAuth onSubmit={(event) => handleSubmit(event)}>
                         <Label>Категорії</Label>
                         <Category name={'categories'} data={data} />
                         <Label>Електронна пошта</Label>
@@ -61,14 +56,11 @@ export const SignInForm = () => {
                         <Input type="password" name="password_confirmation"/>
                         <PolicyCheckBox />
                         <ButtonYellow type="submit">Зареєструватися</ButtonYellow>
-                    </form>
+                    </FormAuth>
                     <ButtonTransparent navigate={'/authorization'}>Я вже зареєстрований</ButtonTransparent>
-                </div>
-            </div>
+                </ChildSubContainerAuth>
+            </SubContainerAuth>
             <ElectricPole />
-            {/*<div className={s.containerElectricPole}>*/}
-            {/*    <Image className={s.electricPole} src={electricPole2} alt={'electricPole'} />*/}
-            {/*</div>*/}
-        </div>
+        </ContainerAuth>
     );
 };

@@ -1,4 +1,4 @@
-import {FC, ReactNode} from "react";
+import type {FC, ReactNode} from "react";
 import s from '@/UI/buttonTransparent/buttonTransparent.module.scss'
 import {useRouter} from "next/navigation";
 

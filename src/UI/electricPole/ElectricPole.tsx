@@ -5,7 +5,7 @@ import {electricPole2} from "@/assets";
 const ElectricPole = () => {
     return (
         <div className={s.containerElectricPole}>
-            <Image className={s.electricPole} src={electricPole2} alt={'electricPole'} />
+            <Image className={s.electricPole} src={electricPole2} alt={'electricPole'} priority />
         </div>
     )
 
