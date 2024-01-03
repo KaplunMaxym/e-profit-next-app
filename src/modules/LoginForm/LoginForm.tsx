@@ -37,7 +37,7 @@ const LoginForm = () => {
                 router.push("/");
             }
         }
-    }, [session, router]);
+    }, [callbackUrl, session, router]);
     console.log(session)
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
         event.preventDefault();
