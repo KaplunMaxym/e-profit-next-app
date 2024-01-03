@@ -1,0 +1,17 @@
+@import '@/styles/variables.scss';
+.container {
+  max-width: 337px;
+  min-width: 200px;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid $middleGray;
+}
+.select {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.option {
+  font-size: 19px;
+  border: none;
+}

@@ -1,0 +1,18 @@
+@import '@/styles/variables.scss';
+
+.yellowColor {
+  background: $yellow;
+}
+.link {
+  font-size: 20px;
+  padding: 10px 20px;
+
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 10px;
+  text-decoration: none;
+
+  color: $black;
+}

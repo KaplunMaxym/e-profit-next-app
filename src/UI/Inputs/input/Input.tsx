@@ -1,25 +1,29 @@
 "use client"
 import s from '@/UI/Inputs/input/input.module.scss'
-import {FC, useState} from "react";
+import {ChangeEvent, FC, useState} from "react";
 import Image from "next/image";
 import {exclamationMark, eyeHide, eyeShow} from "@/assets";
 interface IInput {
     type: string;
     name?: string;
-    onChange?: any;
+    onChange?: ((value: string) => void);
     error?: any;
     placeholder?: string
 }
-const Input: FC<IInput> = ({type, name, onChange, error, placeholder}) => {
+const Input: FC<IInput> = ({type, name, onChange = () => {}, error, placeholder}) => {
     const errorClass = (error && error.correct === false) && s.errorBorder;
     const [eye, setEye] = useState<boolean>(false)
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        onChange(e.target.value);
+    };
+
     return (
         <div className={s.container}>
                 <input
                 className={`${s.input} ${errorClass}`}
                 type={!eye ? type : "text"}
                 name={name}
-                onChange={e => onChange(e.target.value)}
+                onChange={handleChange}
                 placeholder={placeholder}
                 required
             />
