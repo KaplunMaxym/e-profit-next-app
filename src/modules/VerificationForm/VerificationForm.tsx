@@ -47,7 +47,7 @@ export const VerificationForm = () => {
                     <ImageLogo marginBottom={80} />
                     {/*<MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>*/}
                     <MainText marginBottom={5} fontSize={20}>Введіть код надісланий на</MainText>
-                    <MainText fontSize={67}>{emailByVerification}</MainText>
+                    <MainText marginBottom={67} fontSize={14} fontWeight={200}>{emailByVerification}</MainText>
                     <FormAuth onSubmit={(event) => handleSubmit(event)}>
                         <Label center={true}>Код підтвердження</Label>
                         <DigitCode marginBottom={40} name="verification_code"/>

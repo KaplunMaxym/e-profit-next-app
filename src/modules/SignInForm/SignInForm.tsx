@@ -9,14 +9,12 @@ import {ButtonYellow, Input, Label, PolicyCheckBox, Category} from "@/UI";
 import FormAuth from "@/components/Form/formAuth/FormAuth";
 import useValidation from "@/hooks/useValidationHook/useValidationHook";
 import {useEffect, useState} from "react";
-import {useRegHook} from "@/hooks";
 
 export const SignInForm = () => {
     const [selectedCategory, setSelectedCategory] = useState('0');
     const [policyAgreement, setPolicyAgreement] = useState('');
     const [activeSubmitBtn, setActiveSubmitBtn] = useState(true);
     const [loading, setLoading] = useState<boolean>(false)
-
 
     console.log(policyAgreement)
     const router = useRouter();
@@ -31,7 +29,6 @@ export const SignInForm = () => {
         }
     }, [selectedCategory, policyAgreement, errors])
     console.log(errors)
-
 
     const handleSubmit: FormEventHandler<HTMLFormElement> | undefined = async (event) => {
         event.preventDefault();

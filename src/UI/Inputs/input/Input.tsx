@@ -2,7 +2,7 @@
 import s from '@/UI/Inputs/input/input.module.scss'
 import {FC, useState} from "react";
 import Image from "next/image";
-import {eyeHide, eyeShow} from "@/assets";
+import {exclamationMark, eyeHide, eyeShow} from "@/assets";
 interface IInput {
     type: string;
     name?: string;
@@ -23,6 +23,11 @@ const Input: FC<IInput> = ({type, name, onChange, error, placeholder}) => {
                 placeholder={placeholder}
                 required
             />
+            {errorClass &&
+                <div className={s.errorText}>Невірні дані
+                    <Image className={s.imgExclamationMark} src={exclamationMark} alt={'err'} />
+                </div>
+            }
             {type === 'password' &&
                 <Image
                     onClick={() => setEye(!eye)}

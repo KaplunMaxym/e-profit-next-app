@@ -4,6 +4,7 @@ import electricPole2 from '@/assets/img/electricPole2.jpg'
 import eyeHide from '@/assets/img/eyeHide.svg'
 import eyeShow from '@/assets/img/eyeShow.svg'
 import loadingSpiner from '@/assets/img/loadingSpiner.svg'
+import exclamationMark from '@/assets/img/exclamationMark.svg'
 
 export {
     logoMain,
@@ -12,4 +13,5 @@ export {
     eyeHide,
     eyeShow,
     loadingSpiner,
+    exclamationMark,
 }
