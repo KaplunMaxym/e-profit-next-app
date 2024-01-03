@@ -19,6 +19,8 @@ const LoginForm = () => {
     const session: any = useSession()
     const searchParams = useSearchParams()
     const callbackUrl = searchParams.get('callbackUrl');
+    const [loading, setLoading] = useState<boolean>(false)
+
     console.log(callbackUrl)
     useEffect(()=>{
         if(errors.email.correct){
@@ -39,6 +41,7 @@ const LoginForm = () => {
     console.log(session)
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
         event.preventDefault();
+        setLoading(true)
         const formData: FormData = new FormData(event.currentTarget);
         const response: any = await signIn("credentials", {
             email: formData.get('email'),
@@ -46,19 +49,19 @@ const LoginForm = () => {
             redirect: false,
         });
         console.log(response)
+        setLoading(false)
     };
     return (
         <FormAuth onSubmit={handleSubmit}>
             <Label>Електронна пошта</Label>
             <Label>vsev.diachun2002@gmail.com</Label>
-            <Input onChange={validateEmail} error={errors.email} type="email" name="email"/>
+            <Input placeholder={'Введіть логін'} onChange={validateEmail} error={errors.email} type="email" name="email"/>
             <Label>Пароль</Label>
             <Label>Wertwert1@%</Label>
-            <Input type="password" name="password"/>
+            <Input placeholder={'Введіть пароль'} type="password" name="password"/>
             <InputReminder type='checkbox'/>
-            <ButtonYellow type="submit" active={activeSubmitBtn}>Увійти</ButtonYellow>
+            <ButtonYellow loading={loading} type="submit" active={activeSubmitBtn}>Увійти</ButtonYellow>
         </FormAuth>
-
     );
 };
 

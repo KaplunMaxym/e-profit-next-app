@@ -3,8 +3,9 @@ import s from '@/UI/Inputs/digitCode/digitCode.module.scss'
 import {ChangeEvent, FC, useState} from "react";
 interface IInput {
     name?: string;
+    marginBottom?: number;
 }
-const DigitCode: FC<IInput> = ({name}) => {
+const DigitCode: FC<IInput> = ({name, marginBottom}) => {
     const [value, setValue] = useState('');
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
         const inputValue = e.target.value;
@@ -15,6 +16,7 @@ const DigitCode: FC<IInput> = ({name}) => {
     }
     return <input
         className={s.input}
+        style={{marginBottom: marginBottom}}
         type={"number"}
         name={name}
         required

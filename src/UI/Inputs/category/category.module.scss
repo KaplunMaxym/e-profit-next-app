@@ -1,12 +1,16 @@
+@import '@/styles/variables.scss';
 .category {
   padding: 10px;
   margin-bottom: 15px;
 
   border-radius: 9px;
-  border: 1px solid #AEAEAE;
+  border: 1px solid $semiGray;
   box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 
   background: #FFF;
 
   cursor: pointer;
+}
+.category:focus {
+  outline: none;
 }
