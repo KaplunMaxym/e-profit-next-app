@@ -1,0 +1,17 @@
+@import '@/styles/variables.scss';
+.container {
+  width: 100%;
+  min-height: 92px;
+  padding: 16px;
+  margin-bottom: 84px;
+
+  background: $white;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

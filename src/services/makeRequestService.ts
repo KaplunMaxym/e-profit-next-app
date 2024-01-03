@@ -20,4 +20,12 @@ export const makeRequestService = async (method: string, paramUrl:string, body: 
         );
         return res.data.response
     }
+    if(method === "GET"){
+        const res = await axios.get(
+            baseURL + paramUrl,
+            // body,
+            {headers},
+        );
+        return res.data.response
+    }
 }

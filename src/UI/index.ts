@@ -12,6 +12,11 @@ import ContainerAuth from '@/UI/Layouts/Auth/containerAuth/ContainerAuth'
 import SubContainerAuth from '@/UI/Layouts/Auth/subContainerAuth/SubContainerAuth'
 import ChildSubContainerAuth from '@/UI/Layouts/Auth/childSubContainerAuth/ChildSubContainerAuth'
 import DigitCode from "@/UI/Inputs/digitCode/digitCode";
+import Selector from "@/UI/Selector/Selector";
+import BtnLink from "@/UI/Buttons/btnLink/BtnLink";
+import PageDefault from "@/UI/Layouts/Page/DefaultPage/PageDefault";
+import Search from "@/UI/Inputs/search/Search";
+import SelectorCity from "@/UI/SelectorCity/SelectorCity";
 export {
     Input,
     ButtonYellow,
@@ -27,4 +32,9 @@ export {
     SubContainerAuth,
     ChildSubContainerAuth,
     DigitCode,
+    Selector,
+    BtnLink,
+    PageDefault,
+    Search,
+    SelectorCity,
 }
