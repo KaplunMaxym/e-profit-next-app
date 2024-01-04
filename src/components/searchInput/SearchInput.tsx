@@ -3,7 +3,7 @@ import s from '@/components/searchInput/searchInput.module.scss'
 
 const SearchInput = () => {
     return (
-        <div>
+        <div className={s.container}>
             <Search />
         </div>
     );
