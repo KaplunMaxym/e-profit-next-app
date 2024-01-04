@@ -1,8 +1,11 @@
 .container {
   padding: 11px 48px 32px 48px;
+  width: 100%;
 
   display: flex;
-  align-items: flex-end;  justify-content: space-between
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap
 }
 .leftSubContainer {
   display: flex;
