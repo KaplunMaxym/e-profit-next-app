@@ -4,4 +4,8 @@
   padding: 50px;
 
   background: $backgroundGray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

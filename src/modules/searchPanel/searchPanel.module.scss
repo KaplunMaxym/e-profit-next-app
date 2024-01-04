@@ -1,11 +1,13 @@
 @import '@/styles/variables.scss';
 .container {
   width: 100%;
+  max-width: 1252px;
   min-height: 92px;
   padding: 16px;
   margin-bottom: 84px;
 
   background: $white;
+  box-shadow: 0 0 8.5px 0 rgba(0, 0, 0, 0.13);
 
   border-radius: 10px;
 
@@ -13,5 +15,5 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
 }
