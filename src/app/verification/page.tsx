@@ -1,4 +1,4 @@
-import {VerificationForm} from "@/modules/VerificationForm/VerificationForm";
+import {VerificationForm} from "@/modules";
 
 const Page = () => {
     return <VerificationForm />

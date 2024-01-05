@@ -2,7 +2,7 @@
 import Link from "next/link";
 import {signOut, useSession} from "next-auth/react";
 
-export const StatusAuthorization = () => {
+const StatusAuthorization = () => {
     const session: any = useSession()
     console.log(session)
 
@@ -36,3 +36,5 @@ export const StatusAuthorization = () => {
         </>
     )
 }
+
+export default StatusAuthorization;

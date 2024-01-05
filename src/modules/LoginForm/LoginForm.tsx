@@ -9,7 +9,7 @@ import {
     InputReminder,
 } from "@/UI";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
-import FormAuth from "@/components/Form/formAuth/FormAuth";
+import {FormAuth} from "@/components";
 import useValidation from "@/hooks/useValidationHook/useValidationHook";
 
 const LoginForm = () => {

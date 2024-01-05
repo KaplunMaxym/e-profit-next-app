@@ -1,4 +1,4 @@
-import LoginForm from "@/modules/LoginForm/LoginForm";
+import {LoginForm} from "@/modules";
 import {
     ButtonTransparent,
     ChildSubContainerAuth,
