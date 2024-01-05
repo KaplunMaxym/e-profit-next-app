@@ -1,14 +1,13 @@
-import s from '@/modules/vacancies/vacancies.module.scss'
+import s from '@/modules/Vacancies/vacancies.module.scss'
 import {makeRequestService} from "@/services/makeRequestService";
 import {Vacancy} from "@/components";
-import {dataFetch} from "@/modules/vacancies/data";
-import Employment from "../employment/Employment";
+import Employment from "@/modules/Employment/Employment";
 
 async function getData() {
     try {
         return await makeRequestService(
             "GET",
-            "/api/vacancy?page=1&limit=3",
+            "/api/vacancy?page=1&limit=6",
         )
     } catch (e) {
         console.error('ERROR: Vacancies')
@@ -17,8 +16,10 @@ async function getData() {
 
 const Vacancies = async () => {
     const vacancies = await getData()
-    // if (vacancies.vacancies.data) return
+
+    // if (Vacancies.Vacancies.data) return
     const data: any = vacancies.vacancies.data
+    console.log(data)
     // console.log('11111111111')
     // console.log(data)
     // console.log('11111111111')
@@ -26,7 +27,7 @@ const Vacancies = async () => {
     return (
         <div className={s.container}>
             <Employment />
-            <div>{data.map((item: any) => <Vacancy key={item.id} data={item} />)}</div>
+            <div className={s.vacanciesContainer}>{data.map((item: any) => <Vacancy key={item.id} data={item} />)}</div>
         </div>
     );
 };

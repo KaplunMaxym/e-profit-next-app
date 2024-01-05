@@ -1,5 +1,5 @@
 import {PageDefault} from "@/UI";
-import SearchPanel from "@/modules/searchPanel/SearchPanel";
+import SearchPanel from "@/modules/SearchPanel/SearchPanel";
 import {Vacancies} from "@/modules";
 
 const Page = () => {

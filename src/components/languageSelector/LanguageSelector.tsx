@@ -1,5 +1,5 @@
 import React from 'react';
-import {Selector} from "@/UI";
+import {SelectorLanguage} from "@/UI";
 import s from '@/components/languageSelector/languageSelector.module.scss'
 
 const LanguageSelector = () => {
@@ -19,7 +19,7 @@ const LanguageSelector = () => {
     ]
     return (
         <div className={s.block}>
-            <Selector data={data} />
+            <SelectorLanguage data={data} />
         </div>
     );
 };

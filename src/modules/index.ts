@@ -1,6 +1,6 @@
-import SearchPanel from "@/modules/searchPanel/SearchPanel";
-import Vacancies from "@/modules/vacancies/Vacancies";
-import Employment from '@/modules/employment/Employment'
+import SearchPanel from "@/modules/SearchPanel/SearchPanel";
+import Vacancies from "@/modules/Vacancies/Vacancies";
+import Employment from '@/modules/Employment/Employment'
 
 export {
     SearchPanel,

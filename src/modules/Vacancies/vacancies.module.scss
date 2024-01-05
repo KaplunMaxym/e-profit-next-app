@@ -1,12 +1,14 @@
 @import '@/styles/variables.scss';
 .container {
+  max-width: 1252px;
   width: 100%;
-  padding: 50px;
-
-  background: $backgroundGray;
-
+  display: flex;
+  gap: 15px;
+}
+.vacanciesContainer{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 84px;
+  gap: 15px;
 }

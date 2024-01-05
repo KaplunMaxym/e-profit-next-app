@@ -1,4 +1,4 @@
-import s from '@/modules/employment/employment.module.scss'
+import s from '@/modules/Employment/employment.module.scss'
 
 const Employment = () => {
     return (
