@@ -7,6 +7,8 @@ import loadingSpiner from '@/assets/img/loadingSpiner.svg'
 import exclamationMark from '@/assets/img/exclamationMark.svg'
 import safe from '@/assets/img/safe.svg'
 import location from '@/assets/img/location.svg'
+import locationSearch from '@/assets/img/locationSearch.svg'
+import search from '@/assets/img/search.svg'
 
 export {
     logoMain,
@@ -18,4 +20,6 @@ export {
     exclamationMark,
     safe,
     location,
+    locationSearch,
+    search,
 }
