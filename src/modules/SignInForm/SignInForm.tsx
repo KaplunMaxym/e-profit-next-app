@@ -6,11 +6,11 @@ import {IReg} from "@/modules/SignInForm/models/IReg";
 import {useAppDispatch} from "@/hooks/useAppSelector";
 import {userSlice} from "@/store/reducers/UserSlice";
 import {ButtonYellow, Input, Label, PolicyCheckBox, Category} from "@/UI";
-import FormAuth from "@/components/Form/formAuth/FormAuth";
+import {FormAuth} from "@/components";
 import useValidation from "@/hooks/useValidationHook/useValidationHook";
 import {useEffect, useState} from "react";
 
-export const SignInForm = () => {
+const SignInForm = () => {
     const [selectedCategory, setSelectedCategory] = useState('0');
     const [policyAgreement, setPolicyAgreement] = useState('');
     const [activeSubmitBtn, setActiveSubmitBtn] = useState(true);
@@ -72,3 +72,5 @@ export const SignInForm = () => {
         </FormAuth>
     );
 };
+
+export default SignInForm;

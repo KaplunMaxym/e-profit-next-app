@@ -1,5 +1,5 @@
 import type {FC, ReactNode} from 'react';
-import TheHeader from "@/modules/TheHeader/TheHeader";
+import {TheHeader} from "@/modules";
 
 interface ILayaut {
     children: ReactNode;
