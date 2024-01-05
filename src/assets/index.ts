@@ -9,7 +9,7 @@ import safe from '@/assets/img/safe.svg'
 import location from '@/assets/img/location.svg'
 import locationSearch from '@/assets/img/locationSearch.svg'
 import search from '@/assets/img/search.svg'
-
+import selectArrow from '@/assets/img/selectArrow.svg'
 export {
     logoMain,
     electricPole,
@@ -22,4 +22,5 @@ export {
     location,
     locationSearch,
     search,
+    selectArrow,
 }
