@@ -23,6 +23,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  &:hover{
+    cursor: pointer;
+  }
+  input{
+    visibility: hidden;
+  }
 }
 .selectsContainer{
   position: absolute;
@@ -32,10 +38,22 @@
   background: $white;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2px;
   padding: 10px;
+  border-bottom: 1px solid $middleGray;
+  max-height: 200px;
+  overflow-y: scroll;
+  border-radius: 0 0 10px 10px;
 }
-
+.selectItem{
+  transition: all .2s linear;
+  border-radius: 10px;
+  padding: 4px;
+  &:hover{
+    background: $grayHover;
+    cursor: pointer;
+  }
+}
 .select {
   border: none;
   height: 100%;
