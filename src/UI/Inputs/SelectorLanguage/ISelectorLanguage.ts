@@ -3,6 +3,6 @@ interface ISelectorData {
     id: number;
     language: string;
 }
-export interface ISelector {
+export interface ISelectorLanguage {
     data: any[];
 }
