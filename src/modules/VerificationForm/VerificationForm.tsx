@@ -17,7 +17,7 @@ import {
 } from "@/UI";
 import FormAuth from "@/components/Form/formAuth/FormAuth";
 
-export const VerificationForm = () => {
+const VerificationForm = () => {
     const router = useRouter()
     const {emailByVerification} = useAppSelector(state => state.userReducer)
     const {setEmailByVerification} = userSlice.actions
@@ -59,3 +59,5 @@ export const VerificationForm = () => {
         </ContainerAuth>
     );
 };
+
+export default VerificationForm;
