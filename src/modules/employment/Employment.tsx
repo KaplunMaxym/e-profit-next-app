@@ -6,7 +6,7 @@ const Employment = () => {
             <div>
                 <div className={s.title}>Зайнятість</div>
                 <div>
-                    <div><input checked type={'checkbox'}/> <span className={s.full}>Повна</span></div>
+                    <div><input type={'checkbox'}/> <span className={s.full}>Повна</span></div>
                     <div><input type={'checkbox'}/> <span className={s.part}>Неповна</span></div>
                     <div><input type={'checkbox'}/> <span className={s.remotely}>Дистанційна</span></div>
                 </div>
