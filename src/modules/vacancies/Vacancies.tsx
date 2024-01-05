@@ -16,8 +16,9 @@ async function getData() {
 }
 
 const Vacancies = async () => {
-    // const vacancies = await getData()
-    // const data: any = vacancies.vacancies.data
+    const vacancies = await getData()
+    // if (vacancies.vacancies.data) return
+    const data: any = vacancies.vacancies.data
     // console.log('11111111111')
     // console.log(data)
     // console.log('11111111111')
@@ -25,7 +26,7 @@ const Vacancies = async () => {
     return (
         <div className={s.container}>
             <Employment />
-            <div>{dataFetch.map((item: any) => <Vacancy key={item.id} data={item} />)}</div>
+            <div>{data.map((item: any) => <Vacancy key={item.id} data={item} />)}</div>
         </div>
     );
 };
