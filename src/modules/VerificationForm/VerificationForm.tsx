@@ -1,31 +1,31 @@
 'use client';
-import {FormEvent} from "react";
+import {FormEvent, useState} from "react";
 import {useRouter} from 'next/navigation'
 import {useAppDispatch, useAppSelector} from "@/hooks/useAppSelector";
 import {signIn} from "next-auth/react";
 import {userSlice} from "@/store/reducers/UserSlice";
-import MainText from "../../UI/mainText/MainText";
+import MainText from "@/UI/Text/mainText/MainText";
 import {
     ButtonYellow,
     ChildSubContainerAuth,
     ContainerAuth,
-    FormAuth,
     ImageLogo,
-    Input,
     Label,
     SubContainerAuth,
+    DigitCode,
     ElectricPole
 } from "@/UI";
+import FormAuth from "@/components/Form/formAuth/FormAuth";
 
-export const VerificationForm = () => {
+const VerificationForm = () => {
     const router = useRouter()
     const {emailByVerification} = useAppSelector(state => state.userReducer)
     const {setEmailByVerification} = userSlice.actions
     const dispatch = useAppDispatch()
-
-
+    const [loading, setLoading] = useState<boolean>(false)
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
+        setLoading(true)
         const formData = new FormData(event.currentTarget);
         console.log(emailByVerification, formData.get('verification_code'))
         const response = await signIn("credentials", {
@@ -38,19 +38,20 @@ export const VerificationForm = () => {
             dispatch(setEmailByVerification(''))
             router.push("/");
         }
+        setLoading(false)
     }
-
     return (
         <ContainerAuth>
             <SubContainerAuth>
                 <ChildSubContainerAuth>
-                    <ImageLogo marginBottom={30} />
+                    <ImageLogo marginBottom={80} />
                     {/*<MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>*/}
-                    <MainText fontSize={20} fontWeight={400}>Верифікація</MainText>
+                    <MainText marginBottom={5} fontSize={20}>Введіть код надісланий на</MainText>
+                    <MainText marginBottom={67} fontSize={14} fontWeight={200}>{emailByVerification}</MainText>
                     <FormAuth onSubmit={(event) => handleSubmit(event)}>
-                        <Label>Код підтвердження</Label>
-                        <Input type="text" name="verification_code"/>
-                        <ButtonYellow type="submit">Продовжити</ButtonYellow>
+                        <Label center={true}>Код підтвердження</Label>
+                        <DigitCode marginBottom={40} name="verification_code"/>
+                        <ButtonYellow loading={loading} type="submit">Продовжити</ButtonYellow>
                     </FormAuth>
                 </ChildSubContainerAuth>
             </SubContainerAuth>
@@ -58,3 +59,5 @@ export const VerificationForm = () => {
         </ContainerAuth>
     );
 };
+
+export default VerificationForm;

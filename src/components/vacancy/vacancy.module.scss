@@ -1,0 +1,70 @@
+@import '@/styles/variables.scss';
+.container {
+  min-width: 300px;
+  //max-width: 1017px;
+  width: 100%;
+  height: 254px;
+  display: flex;
+
+  border-radius: 10px;
+
+  background: $white;
+  box-shadow: 0 0 8.5px 0 rgba(0, 0, 0, 0.13);
+}
+@mixin reset-list ($width) {
+  width: $width;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  //border: 1px solid red;
+}
+.leftSubContainer {
+  @include reset-list(70%);
+}
+.rightSubContainer {
+  @include reset-list(30%);
+  align-items: flex-end;
+}
+.title {
+  font-size: 24px;
+  font-style: normal;
+  line-height: normal;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: $mintGreen;
+}
+.price {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.city {
+  display: flex;
+  align-items: center;
+}
+.imgLocation {
+  margin-right: 5px;
+}
+.cityName {
+  font-family: 'Inter', sans-serif;
+}
+.online {
+  font-family: 'Inter', sans-serif;
+}
+.employment {
+  font-family: 'Inter', sans-serif;
+  width: 173px;
+  padding: 6px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 200;
+  background: $lightYellow;
+}

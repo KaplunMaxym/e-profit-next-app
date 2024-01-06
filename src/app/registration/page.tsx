@@ -1,4 +1,4 @@
-import {SignInForm} from "@/modules/SignInForm/SignInForm";
+import {SignInForm} from "@/modules";
 import {
     ButtonTransparent,
     ChildSubContainerAuth,
