@@ -1,10 +1,10 @@
 import type {FC, ReactNode} from 'react';
 import {TheHeader} from "@/modules";
 
-interface ILayaut {
+interface ILayout {
     children: ReactNode;
 }
-const Layout: FC<ILayaut> = ({children}) => {
+const Layout: FC<ILayout> = ({children}) => {
     return (
         <div>
             <TheHeader />

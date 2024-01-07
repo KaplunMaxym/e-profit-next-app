@@ -14,6 +14,9 @@ import ChildSubContainerAuth from '@/UI/Layouts/Auth/childSubContainerAuth/Child
 import DigitCode from "@/UI/Inputs/digitCode/digitCode";
 import SelectorLanguage from "@/UI/Inputs/SelectorLanguage/SelectorLanguage";
 import BtnLink from "@/UI/Buttons/btnLink/BtnLink";
+import BtnLinkYellow from "@/UI/Buttons/btnLinkYellow/BtnLinkYellow";
+import BtnSearchWork from "@/UI/Buttons/btnSearchWork/BtnSearchWork";
+import BtnLinkTo from "@/UI/Buttons/btnLinkTo/BtnLinkTo";
 import PageDefault from "@/UI/Layouts/Page/DefaultPage/PageDefault";
 import Search from "@/UI/Inputs/search/Search";
 import SelectorLocation from "@/UI/Inputs/SelectorLocation/SelectorLocation";
@@ -37,4 +40,7 @@ export {
     PageDefault,
     Search,
     SelectorLocation,
+    BtnLinkTo,
+    BtnSearchWork,
+    BtnLinkYellow,
 }

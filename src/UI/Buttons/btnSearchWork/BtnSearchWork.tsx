@@ -1,7 +1,7 @@
-import s from '@/UI/Buttons/btnLink/btnLink.module.scss'
+import s from '@/UI/Buttons/btnSearchWork/btnSearchWork.module.scss'
 import Link from "next/link";
 import {FC, MouseEventHandler, ReactNode} from "react";
-interface IBtnLink {
+interface IBtnSearchWork {
     children: ReactNode;
     href: string;
     onClick?: MouseEventHandler<HTMLAnchorElement>;
@@ -9,7 +9,7 @@ interface IBtnLink {
     margin?: number;
     height100?: boolean;
 }
-const BtnLink: FC<IBtnLink> = ({children, href, onClick, fontSize, margin, height100}) => {
+const BtnSearchWork: FC<IBtnSearchWork> = ({children, href, onClick, fontSize, margin, height100}) => {
     return <Link
         href={href}
         onClick={onClick}
@@ -20,4 +20,4 @@ const BtnLink: FC<IBtnLink> = ({children, href, onClick, fontSize, margin, heigh
     </Link>
 };
 
-export default BtnLink;
+export default BtnSearchWork;

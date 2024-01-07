@@ -14,11 +14,6 @@ const nextConfig = {
             },
         ],
     },
-    publicRuntimeConfig: {
-        BASE_URL: process.env.BASE_URL,
-        EXAMPLE_VAR: process.env.EXAMPLE_VAR,
-    },
 }
-
 
 module.exports = nextConfig

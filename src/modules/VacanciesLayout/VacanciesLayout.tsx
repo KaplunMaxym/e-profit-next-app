@@ -7,27 +7,22 @@ import {useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/useAppSelector";
 import {vacanciesSlice} from "@/store/reducers/VacanciesSlice";
 import axios from "axios";
-import getConfig from 'next/config';
-
-
 
 const VacanciesLayout = () => {
     const dispatch = useAppDispatch();
     const {setVacancies} = vacanciesSlice.actions;
     const {vacancies} = useAppSelector(data => data.vacanciesReducer);
-    const [currentPage, setCurrentPage] = useState<number>(1);
+    const [currentPage, setCurrentPage] = useState<number>(0);
     const [fetching, setFetching] = useState<boolean>(true);
     const [count, setCount] = useState<number>(10);
-
-    const { publicRuntimeConfig } = getConfig();
-    console.log(publicRuntimeConfig.BASE_URL)
+    const URL = process.env.NEXT_PUBLIC_URL
 
     useEffect(() => {
         if (fetching) {
-            axios.get(`http://localhost:3000/api/vacancies?page=${currentPage}&limit=10`)
+            axios.get(`${URL}/api/vacancies?page=${currentPage}&limit=10`)
                 .then(data => {
                     dispatch(setVacancies([...vacancies, ...data.data.response.vacancies.data]));
-                    setCount(data.data.response.vacancies.data.length)
+                    setCount(data.data.response.vacancies.data.length);
                     setCurrentPage(prevState => prevState + 1);
                 })
                 .finally(() => setFetching(false))
@@ -49,7 +44,7 @@ const VacanciesLayout = () => {
     return (
         <div className={s.container}>
             <Employment />
-            {vacancies ? <div className={s.vacanciesContainer}>{vacancies.map((item: any) => <Vacancy key={item.id} data={item} />)}</div> : ''}
+            {vacancies ? <div className={s.vacanciesContainer}>{vacancies.map((item: any) => <Vacancy key={item.id} data={item} />)}</div> : <div className={s.vacanciesContainer}>Loading...</div>}
         </div>
     );
 };
