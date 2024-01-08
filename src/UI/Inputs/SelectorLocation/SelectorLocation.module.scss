@@ -19,15 +19,22 @@
 }
 .selectHeader{
   width: 100%;
+  min-width: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  span{
+    flex-grow: 1;
+  }
   &:hover{
     cursor: pointer;
   }
   input{
+    position: absolute;
     visibility: hidden;
+    z-index: -1;
   }
 }
 .selectsContainer{

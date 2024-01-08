@@ -1,14 +1,15 @@
-import s from '@/UI/Buttons/btnLinkTo/btnLinkTo.module.scss'
+import s from '@/UI/Buttons/btnActionSecondary/btnActionSecondary.module.scss'
 import Link from "next/link";
 import {FC, MouseEventHandler, ReactNode} from "react";
-interface IBtnLinkTo {
+interface IBtnLink {
     children: ReactNode;
     href: string;
     onClick?: MouseEventHandler<HTMLAnchorElement>;
+    fontSize?: number;
     margin?: number;
     height100?: boolean;
 }
-const BtnLinkTo: FC<IBtnLinkTo> = ({children, href, onClick, margin, height100}) => {
+const BtnActionSecondary: FC<IBtnLink> = ({children, href, onClick, fontSize, margin, height100}) => {
     return <Link
         href={href}
         onClick={onClick}
@@ -19,4 +20,4 @@ const BtnLinkTo: FC<IBtnLinkTo> = ({children, href, onClick, margin, height100})
     </Link>
 };
 
-export default BtnLinkTo;
+export default BtnActionSecondary;
