@@ -24,8 +24,10 @@
 }
 .leftLinks {
   display: flex;
+  gap: 40px;
 }
 .rightSubContainer {
   display: flex;
   align-items: flex-end;
+  gap: 20px;
 }
