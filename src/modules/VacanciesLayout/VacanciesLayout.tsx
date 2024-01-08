@@ -17,7 +17,6 @@ const VacanciesLayout = () => {
     const [count, setCount] = useState<number>(10);
 
     useEffect(() => {
-        console.log('log')
         if (fetching) {
             axios.get(`/api/vacancies?page=${currentPage}&limit=10`)
                 .then(data => {
