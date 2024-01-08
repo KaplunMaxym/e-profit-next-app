@@ -13,7 +13,7 @@ interface IVacancyData {
         "companyPhoto": string,
         "contractual": false | null,
         "price": number | null,
-        "employment": string | null,
+        "employment": string,
         "online": string | null,
         "contacts": {
             "email": string | null,
@@ -23,26 +23,45 @@ interface IVacancyData {
         }
     }
 }
+const dataMock = {
+    "id": 0,
+    "is_saved": false,
+    "info": {
+        "cityName": '',
+        "status": false,
+        "vacName": '',
+        "companyPhoto": '',
+        "contractual": false,
+        "price": 0,
+        "employment": '',
+        "online": '',
+        "contacts": {
+            "email": '',
+            "phone": [
+                '',
+            ]
+        }
+    }
+}
 interface IVacancy{
     data?: IVacancyData;
 }
 
-const Vacancy: FC<IVacancy> = ({data}) => {
-
+const Vacancy: FC<IVacancy> = ({data = {dataMock}}) => {
     return (
         <div className={s.container}>
             <div className={s.leftSubContainer}>
-                <div className={s.employment}>{data && data.info.employment}</div>
+                <div className={s.employment}>{data.info?.employment}</div>
                 <div>
-                    <div className={s.title}>{data && data.info.vacName}</div>
-                    <div className={s.price}>{data && data.info.price} грн</div>
+                    <div className={s.title}>{data.info?.vacName}</div>
+                    <div className={s.price}>{data.info?.price} грн</div>
                 </div>
-                <div className={s.city}><Image className={s.imgLocation} width={14} src={location} alt={location} /><span className={s.cityName}> {data && data.info.cityName && data.info.cityName}</span></div>
+                <div className={s.city}><Image className={s.imgLocation} width={14} src={location} alt={location} /><span className={s.cityName}> {data.info?.cityName}</span></div>
             </div>
             <div className={s.rightSubContainer}>
                 <Image src={safe} alt={safe} />
-                {data && data.info.companyPhoto && <Image src={data.info.companyPhoto} alt={safe} width={100} height={100} />}
-                <div className={s.online}>{data && data.info.online && data.info.online}</div>
+                {data.info?.companyPhoto && <Image src={data.info?.companyPhoto} alt={safe} width={100} height={100} />}
+                <div className={s.online}>{data.info?.online}</div>
             </div>
         </div>
     );

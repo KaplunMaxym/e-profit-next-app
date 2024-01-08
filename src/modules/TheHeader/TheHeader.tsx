@@ -2,7 +2,7 @@ import s from '@/modules/TheHeader/theHeader.module.scss'
 import Image from "next/image";
 import {logoMain} from "@/assets";
 import {LanguageSelector} from "@/components";
-import {BtnLink} from "@/UI";
+import {BtnLink, BtnLinkTo, BtnLinkYellow} from "@/UI";
 
 const TheHeader = () => {
     return (
@@ -10,15 +10,15 @@ const TheHeader = () => {
             <div className={s.leftSubContainer}>
                 <Image src={logoMain} alt={'logo'} priority />
                 <div className={s.leftLinks}>
-                    <BtnLink fontSize={18} href={'/'} >Знайти вакансії</BtnLink>
-                    <BtnLink fontSize={18} href={'/'} >Навчальні курси</BtnLink>
-                    <BtnLink fontSize={18} href={'/'} >Новини</BtnLink>
+                    <BtnLinkTo href={'/'} >Знайти вакансії</BtnLinkTo>
+                    <BtnLinkTo href={'/'} >Навчальні курси</BtnLinkTo>
+                    <BtnLinkTo href={'/'} >Новини</BtnLinkTo>
                 </div>
             </div>
             <div className={s.rightSubContainer}>
                 <LanguageSelector />
-                <BtnLink fontSize={18} href={'/'}>Увійти</BtnLink>
-                <BtnLink fontSize={18} yellow href={'/'}>Реєстрація</BtnLink>
+                <BtnLink href={'/'}>Увійти</BtnLink>
+                <BtnLinkYellow href={'/'}>Реєстрація</BtnLinkYellow>
             </div>
         </div>
     );

@@ -1,21 +1,21 @@
 // geologica
-%geologica-semibolt{
+%geologica-semibold{
   color: #000;
-  font-family: "Geologica Cursive";
+  font-family: var(--geologica-font), sans-serif;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 %geologica-medium{
   color: #000;
-  font-family: "Geologica Cursive";
+  font-family: var(--geologica-font), sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 %geologica-regular{
   color: #000;
-  font-family: "Geologica Cursive";
+  font-family: var(--geologica-font), sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -23,29 +23,31 @@
 // inter
 %inter-bold{
   color: #000;
-  font-family: Inter;
+  font-family: var(--inter-font), sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-%inter-semibolt{
+%inter-semibold{
   color: #000;
-  //font-family: "Inter";
+  font-family: var(--inter-font), sans-serif;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
-%inter-semibolt{
+%inter-semibold{
   color: #000;
-  font-family: Inter;
+  font-family: var(--inter-font), sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-%inter-semibolt{
+%inter-semibold{
   color: #000;
-  font-family: Inter;
+  font-family: var(--inter-font), sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+//font-family: var(--inter-font);
+//font-family: var(--geologica-font);

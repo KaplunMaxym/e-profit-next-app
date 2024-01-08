@@ -1,0 +1,23 @@
+@import '@/styles/variables.scss';
+@import "@/styles/fonts.scss";
+
+.link {
+  //min-width: 171px;
+  padding: 10px 20px;
+  font-size: 20px;
+  max-width: 186px;
+  min-width: 186px;
+  width: 100%;
+  //@extend %inter-semibold;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: $black;
+  background: $yellow;
+  white-space: nowrap;
+  transition: background-color .3s ease-in-out;
+  &:hover {
+    background: $yellowHover;
+  }
+}

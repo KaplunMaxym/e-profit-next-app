@@ -5,9 +5,16 @@ const nextConfig = {
         includePaths: [path.join(__dirname, 'styles')],
     },
     images: {
-        domains: ['testapi.siteweb.org.ua'],
+        remotePatterns: [
+            {
+                hostname: 'testapi.siteweb.org.ua',
+            },
+            {
+                hostname: 'images.testapi.siteweb.org.ua',
+            },
+        ],
     },
+    reactStrictMode: false
 }
-
 
 module.exports = nextConfig
