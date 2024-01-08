@@ -14,7 +14,8 @@ export const vacanciesSlice = createSlice({
     initialState,
     reducers: {
         setVacancies: (state, action: PayloadAction<any>) => {
-            state.vacancies = action.payload
+            // state.vacancies = action.payload
+            state.vacancies = [...state.vacancies, ...action.payload]
         },
     },
 })

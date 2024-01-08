@@ -12,22 +12,28 @@ const VacanciesLayout = () => {
     const dispatch = useAppDispatch();
     const {setVacancies} = vacanciesSlice.actions;
     const {vacancies} = useAppSelector(data => data.vacanciesReducer);
-    const [currentPage, setCurrentPage] = useState<number>(0);
+    const [currentPage, setCurrentPage] = useState<number>(1);
     const [fetching, setFetching] = useState<boolean>(true);
     const [count, setCount] = useState<number>(10);
-    const URL = process.env.NEXT_PUBLIC_URL
 
     useEffect(() => {
+        console.log('log')
         if (fetching) {
-            axios.get(`${URL}/api/vacancies?page=${currentPage}&limit=10`)
+            axios.get(`/api/vacancies?page=${currentPage}&limit=10`)
                 .then(data => {
-                    dispatch(setVacancies([...vacancies, ...data.data.response.vacancies.data]));
-                    setCount(data.data.response.vacancies.data.length);
+                    // console.log(data.data);
+                    // dispatch(setVacancies([...vacancies, ...data.data.response.vacancies.data]));
+                    // dispatch(setVacancies(data.data.response.vacancies.data));
+                    dispatch(setVacancies(data.data));
+                    // dispatch(setVacancies([...vacancies, ...data.data]));
+                    setCount(data.data);
+                    // setCount(data.data.response.vacancies.data.length);
                     setCurrentPage(prevState => prevState + 1);
                 })
                 .finally(() => setFetching(false))
         }
     }, [fetching]);
+
 
     useEffect(() => {
         document.addEventListener('scroll', scrollHandler);

@@ -28,11 +28,10 @@ interface IVacancy{
 }
 
 const Vacancy: FC<IVacancy> = ({data}) => {
-
     return (
         <div className={s.container}>
             <div className={s.leftSubContainer}>
-                <div className={s.employment}>{data && data.info.employment}</div>
+                <div className={s.employment}>{data && data.info.employment && data.info.employment}</div>
                 <div>
                     <div className={s.title}>{data && data.info.vacName}</div>
                     <div className={s.price}>{data && data.info.price} грн</div>
