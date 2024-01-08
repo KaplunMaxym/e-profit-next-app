@@ -1,4 +1,4 @@
-import s from '@/UI/Buttons/btnLinkYellow/btnLinkYellow.module.scss'
+import s from '@/UI/Buttons/btnActionPrimary/btnActionPrimary.module.scss'
 import Link from "next/link";
 import {FC, MouseEventHandler, ReactNode} from "react";
 interface IBtnLink {
@@ -8,7 +8,7 @@ interface IBtnLink {
     margin?: number;
     height100?: boolean;
 }
-const BtnLinkYellow: FC<IBtnLink> = ({children, href, onClick, margin, height100}) => {
+const BtnActionPrimary: FC<IBtnLink> = ({children, href, onClick, margin, height100}) => {
     return <Link
         href={href}
         onClick={onClick}
@@ -19,4 +19,4 @@ const BtnLinkYellow: FC<IBtnLink> = ({children, href, onClick, margin, height100
     </Link>
 };
 
-export default BtnLinkYellow;
+export default BtnActionPrimary;
