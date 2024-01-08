@@ -4,6 +4,7 @@
    box-sizing: border-box;
    /*font-family: Inter, "Andale Mono";*/
    font-family: var(--inter-font), sans-serif;
+
 }
 
 .btn {

@@ -4,7 +4,7 @@ import {
     ChildSubContainerAuth,
     ContainerAuth,
     ElectricPole,
-    ImageLogo,
+    ImageLogo, MainSecondatyText,
     MainText,
     SubContainerAuth
 } from "@/UI";
@@ -15,8 +15,8 @@ const Page = () => {
             <SubContainerAuth>
                 <ChildSubContainerAuth>
                     <ImageLogo marginBottom={16} />
-                    <MainText fontWeight={400} fontSize={26} marginBottom={31} eprofi={true}>Ласкаво просимо до</MainText>
-                    <MainText fontSize={20}>Створіть профіль</MainText>
+                    <MainText eprofi={true}>Ласкаво просимо до</MainText>
+                    <MainSecondatyText>Створіть профіль</MainSecondatyText>
                     <SignInForm />
                     <ButtonTransparent navigate={'/authorization'}>Я вже зареєстрований</ButtonTransparent>
                 </ChildSubContainerAuth>
