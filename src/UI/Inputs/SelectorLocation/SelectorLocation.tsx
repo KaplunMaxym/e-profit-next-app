@@ -38,7 +38,7 @@ const SelectorLocation = ({ data, headerTitle}: any) => {
             <div className={s.selectContainer}>
                 <div className={s.selectHeader} onClick={toggleSelect}>
                     <span>{selectedValue || headerTitle}</span>
-                    <input type="text" value={selectedValue}/>
+                    <input type="text" value={selectedValue} onChange={()=>{}}/>
                     <Image src={selectArrow} alt={'arrow'} />
                 </div>
                 {isSelectOpen && (

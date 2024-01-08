@@ -6,7 +6,7 @@
 }
 .link {
   font-size: 20px;
-  padding: 10px 20px;
+  padding: 10px 0;
   //min-width: 186px;
   //@extend %inter-semibolt;
   display: flex;
@@ -14,4 +14,19 @@
   border-radius: 10px;
   text-decoration: none;
   color: $black;
+  position: relative;
+  &:hover::before{
+    width: 100%;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    transition: all .3s linear;
+    width: 0;
+    height: 6px;
+    border-radius: 3px;
+    background: $yellow;
+    top: 100%;
+    left: 0;
+  }
 }
