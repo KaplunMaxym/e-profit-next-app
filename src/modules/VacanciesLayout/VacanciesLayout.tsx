@@ -20,13 +20,8 @@ const VacanciesLayout = () => {
         if (fetching) {
             axios.get(`/api/vacancies?page=${currentPage}&limit=10`)
                 .then(data => {
-                    // console.log(data.data);
-                    // dispatch(setVacancies([...vacancies, ...data.data.response.vacancies.data]));
-                    // dispatch(setVacancies(data.data.response.vacancies.data));
                     dispatch(setVacancies(data.data));
-                    // dispatch(setVacancies([...vacancies, ...data.data]));
                     setCount(data.data);
-                    // setCount(data.data.response.vacancies.data.length);
                     setCurrentPage(prevState => prevState + 1);
                 })
                 .finally(() => setFetching(false))

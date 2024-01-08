@@ -12,7 +12,7 @@ interface IButtonYellow {
 const ButtonYellow: FC<IButtonYellow> = ({children, type, active, loading}) => {
     return(
     <button
-        className={s.buttonYellow}
+        className={`${s.buttonYellow} ${!active && s.buttonYellowHover}`}
         type={type}
         disabled={active}
     >

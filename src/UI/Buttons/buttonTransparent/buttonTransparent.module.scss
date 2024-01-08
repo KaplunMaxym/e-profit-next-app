@@ -1,7 +1,12 @@
+@import '@/styles/variables.scss';
 .buttonTransparent {
   padding: 10px;
   border-radius: 10px;
-  background: white;
+  background-color: $white;
   border: 0;
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  &:hover {
+    background-color: $grayHover;
+  }
 }
