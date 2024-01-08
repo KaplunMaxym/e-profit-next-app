@@ -1,5 +1,5 @@
 import s from '@/modules/SearchPanel/searchPanel.module.scss'
-import {BtnLink, Search, SelectorLocation} from "@/UI";
+import {Search, SelectorLocation, BtnSearchWork} from "@/UI";
 
 const city = [
     {
@@ -25,7 +25,7 @@ const SearchPanel = () => {
             <Search/>
             <SelectorLocation data={area} headerTitle={'Виберіть область'}/>
             <SelectorLocation data={city} headerTitle={'Виберіть місто'} />
-            <BtnLink height100 yellow fontSize={20} href={'/'}>Знайти роботу</BtnLink>
+            <BtnSearchWork height100 href={'/'}>Знайти роботу</BtnSearchWork>
         </div>
     );
 };

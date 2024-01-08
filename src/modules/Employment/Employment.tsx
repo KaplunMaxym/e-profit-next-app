@@ -13,10 +13,17 @@ const Employment = () => {
             </div>
             <div>
                 <div className={s.title}>Зарплата</div>
-                <div>
-                    <div style={{marginBottom: 5}}><span className={s.fromTo}>від</span><input className={s.input} /></div>
-                    <div><span className={s.fromTo}>до</span><input className={s.input} /></div>
+                <div className={s.salarySub}>
+                    <div>
+                        <div style={{marginBottom: 5}}><span className={s.fromTo}>від</span></div>
+                        <div><span className={s.fromTo}>до</span></div>
+                    </div>
+                    <div>
+                        <div><input className={s.input}/></div>
+                        <div><input className={s.input}/></div>
+                    </div>
                 </div>
+
             </div>
         </div>
     );
