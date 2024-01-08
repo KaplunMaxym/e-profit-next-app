@@ -1,3 +1,4 @@
+@import '@/styles/variables.scss';
 .buttonYellow {
   padding: 10px;
   border-radius: 10px;
@@ -7,6 +8,12 @@
   cursor: pointer;
   font-weight: 600;
   position: relative;
+}
+.buttonYellowHover {
+  transition: background-color .3s ease-in-out;
+  &:hover{
+    background-color: $yellowHover;
+  }
 }
 .img {
   position: absolute;

@@ -6,6 +6,7 @@ import ButtonTransparent from '@/UI/Buttons/buttonTransparent/ButtonTransparent'
 import PolicyCheckBox from '@/UI/Inputs/policyCheckBox/PolicyCheckBox'
 import Category from '@/UI/Inputs/category/Category'
 import MainText from '@/UI/Text/mainText/MainText'
+import MainSecondatyText from '@/UI/Text/mainSecondatyText/MainSecondatyText'
 import ImageLogo from '@/UI/AssetsUI/imageLogo/ImageLogo'
 import ElectricPole from '@/UI/AssetsUI/electricPole/ElectricPole'
 import ContainerAuth from '@/UI/Layouts/Auth/containerAuth/ContainerAuth'
@@ -43,4 +44,5 @@ export {
     BtnSearchWork,
     BtnActionPrimary,
     BtnActionSecondary,
+    MainSecondatyText,
 }
