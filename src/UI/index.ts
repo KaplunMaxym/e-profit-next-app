@@ -21,6 +21,7 @@ import PageDefault from "@/UI/Layouts/Page/DefaultPage/PageDefault";
 import Search from "@/UI/Inputs/search/Search";
 import SelectorLocation from "@/UI/Inputs/SelectorLocation/SelectorLocation";
 import BtnActionSecondary from "@/UI/Buttons/btnActionSecondary/btnActionSecondary";
+import MainPageLayout from "@/UI/Layouts/Page/MainPageLayout/MainPageLayout";
 export {
     Input,
     ButtonYellow,
@@ -45,4 +46,5 @@ export {
     BtnActionPrimary,
     BtnActionSecondary,
     MainSecondatyText,
+    MainPageLayout,
 }

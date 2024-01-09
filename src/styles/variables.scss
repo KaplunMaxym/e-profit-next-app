@@ -6,12 +6,13 @@ $black: #000000;
 $backgroundGray: #F4F4F4;
 $grayHover: #E6E6E6;
 $white: #FFFFFF;
+$whiteOpacity: rgba(255, 255, 255, 0.6);
 $middleGray: #D6DDEB;
 $lightYellow: #F7FFBE;
 $mintGreen: #08987F;
 $yellowHover: #FFFAB9;
 
-$geologica-font: var(--geologica-font), sans-serif;
-$inter-font: var(--inter-font), sans-serif;
+$geologica-font: var(--geologica-font), Roman;
+$inter-font: var(--inter-font);
 
 //@import '@/styles/variables.scss';

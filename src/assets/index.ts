@@ -10,6 +10,8 @@ import location from '@/assets/img/location.svg'
 import locationSearch from '@/assets/img/locationSearch.svg'
 import search from '@/assets/img/search.svg'
 import selectArrow from '@/assets/img/selectArrow.svg'
+import {carouselImages} from '@/assets/img/carouselMainSlider'
+
 export {
     logoMain,
     electricPole,
@@ -23,4 +25,5 @@ export {
     locationSearch,
     search,
     selectArrow,
+    carouselImages
 }
