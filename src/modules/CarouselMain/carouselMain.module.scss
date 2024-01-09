@@ -1,0 +1,74 @@
+@import '@/styles/variables.scss';
+@import "@/styles/fonts";
+
+.carouselContainer{
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+.arrow{
+  position: absolute;
+  padding: 1.5%;
+  border-radius: 8px;
+  background: $yellow;
+  z-index: 2;
+  display: flex;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+.arrowLeft{
+  top: 50%;
+  left: 4%;
+  transform: translate(0, -50%) rotateZ(180deg);
+}
+.arrowRight{
+  top: 50%;
+  right: 4%;
+}
+.carouselSlide{
+  position: relative;
+  max-height: 100%;
+
+}
+.slideBackImage{
+  object-fit: cover;
+  height: auto;
+}
+.slideContentContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  //padding: 71px 60px 60px 60px;
+  padding-top: 10%;
+  padding-left: 7%;
+  padding-right: 7%;
+  h2{
+    color: $black;
+    text-align: center;
+    @extend %geologica-regular;
+    font-size: 52px;
+    max-width: 1344px;
+  }
+}
+
+.customIndicator{
+  background: $whiteOpacity;
+  width: 20%;
+  height: 0.5vw;
+  min-height: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 5%;
+  cursor: pointer;
+}
+.customIndicatorSelected{
+  background: $yellow;
+}

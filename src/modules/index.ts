@@ -6,6 +6,7 @@ import TheHeader from '@/modules/TheHeader/TheHeader'
 import SignInForm from '@/modules/SignInForm/SignInForm'
 import StatusAuthorization from '@/modules/main/StatusAuthorization'
 import LoginForm from '@/modules/LoginForm/LoginForm'
+import CarouselMain from '@/modules/CarouselMain/CarouselMain'
 
 export {
     SearchPanel,
@@ -16,4 +17,5 @@ export {
     SignInForm,
     StatusAuthorization,
     LoginForm,
+    CarouselMain
 }
