@@ -1,0 +1,35 @@
+@import '@/styles/variables.scss';
+@import "@/styles/fonts.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.link {
+  background: $white;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid $grayDark;
+  background: $white;
+  text-decoration: none;
+  color: $grayDark;
+  transition: background-color, border .3s ease-in-out;
+  &:hover {
+    border: 1px solid $yellow;
+    background: $yellow;
+    color: $black;
+  }
+}
+
+.img {
+  position: absolute;
+  right: 13px;
+  pointer-events: none
+}

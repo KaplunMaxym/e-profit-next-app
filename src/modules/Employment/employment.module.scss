@@ -1,39 +1,41 @@
 @import '@/styles/variables.scss';
+@import '@/styles/fonts';
+
 .container {
   width: 220px;
+  height: 606px;
   min-width: 220px;
-  height: 280px;
-  padding: 10px 14px;
+  //height: 280px;
+  padding: 16px 20px;
+  gap: 30px;
 
   background: $white;
   box-shadow: 0 0 8.5px 0 rgba(0, 0, 0, 0.13);
   border-radius: 10px;
 
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  //font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  @extend %inter-regular;
+  font-size: 16px;
 }
 .title {
   font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
+  @extend %inter-semibold;
 }
-.full {
+.checkbox {
   font-size: 16px;
-}
-.part {
-  font-size: 16px;
-  font-weight: 200;
-}
-.remotely {
-  font-size: 16px;
-  font-weight: 200;
+  @extend %inter-regular;
+  margin-left: 5px;
+  &:checked {
+    @extend %inter-semibold;
+    color: red;
+  }
 }
 .salarySub {
   display: flex;
@@ -51,6 +53,24 @@
   border-radius: 6px;
   border: 1px solid $semiGray;
 }
+.inputString {
+  border-radius: 6px;
+  border: 1px solid var(--semi-gray, #B0BABF);
+  background: $white;
+  padding: 9px 12px;
+}
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
 @media (max-width: 800px) {
   .container {
     display: none;
