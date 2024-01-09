@@ -21,6 +21,8 @@ import PageDefault from "@/UI/Layouts/Page/DefaultPage/PageDefault";
 import Search from "@/UI/Inputs/search/Search";
 import SelectorLocation from "@/UI/Inputs/SelectorLocation/SelectorLocation";
 import BtnActionSecondary from "@/UI/Buttons/btnActionSecondary/btnActionSecondary";
+import BtnApplySideLeftBar from "@/UI/Buttons/btnApplySideLeftBar/BtnApplySideLeftBar";
+import BtnClearFilters from "@/UI/Buttons/btnClearFilters/BtnClearFilters";
 export {
     Input,
     ButtonYellow,
@@ -45,4 +47,6 @@ export {
     BtnActionPrimary,
     BtnActionSecondary,
     MainSecondatyText,
+    BtnApplySideLeftBar,
+    BtnClearFilters,
 }

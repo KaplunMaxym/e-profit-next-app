@@ -10,6 +10,7 @@ import location from '@/assets/img/location.svg'
 import locationSearch from '@/assets/img/locationSearch.svg'
 import search from '@/assets/img/search.svg'
 import selectArrow from '@/assets/img/selectArrow.svg'
+import x from '@/assets/img/x.svg'
 export {
     logoMain,
     electricPole,
@@ -23,4 +24,5 @@ export {
     locationSearch,
     search,
     selectArrow,
+    x,
 }
