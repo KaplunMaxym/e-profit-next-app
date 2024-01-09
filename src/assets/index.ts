@@ -25,6 +25,6 @@ export {
     locationSearch,
     search,
     selectArrow,
-    carouselImages
+    carouselImages,
     x,
 }

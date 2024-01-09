@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${geologica.variable}`}>
         <StoreProvider>
             <ProvidersSession>
-                <main> <TheHeader/> {children}</main>
+                <main> {children}</main>
             </ProvidersSession>
         </StoreProvider>
       </body>
