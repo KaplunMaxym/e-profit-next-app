@@ -1,13 +1,12 @@
-import s from '@/UI/Buttons/btnSearchWork/btnSearchWork.module.scss'
+import s from '@/UI/Buttons/btnApplySideLeftBar/btnApplySideLeftBar.module.scss'
 import {FC, MouseEventHandler, ReactNode} from "react";
-interface IBtnSearchWork {
+interface IBtnLink {
     children: ReactNode;
     onClick?:  MouseEventHandler<HTMLButtonElement>;
-    fontSize?: number;
     margin?: number;
     height100?: boolean;
 }
-const BtnSearchWork: FC<IBtnSearchWork> = ({children, onClick, fontSize, margin, height100}) => {
+const BtnApplySideLeftBar: FC<IBtnLink> = ({children, onClick, margin, height100}) => {
     return <button
         onClick={onClick}
         className={s.link}
@@ -17,4 +16,4 @@ const BtnSearchWork: FC<IBtnSearchWork> = ({children, onClick, fontSize, margin,
     </button>
 };
 
-export default BtnSearchWork;
+export default BtnApplySideLeftBar;
