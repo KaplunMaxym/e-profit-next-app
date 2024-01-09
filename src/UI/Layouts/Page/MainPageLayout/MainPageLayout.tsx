@@ -1,5 +1,5 @@
 import {FC, ReactNode} from "react";
-import s from '@/UI/Layouts/Page/DefaultPage/pageDefault.module.scss'
+import s from '@/UI/Layouts/Page/MainPageLayout/MainPageLayout.module.scss'
 
 interface IDefaultPage {
     children: ReactNode;
