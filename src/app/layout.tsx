@@ -4,6 +4,7 @@ import {ProvidersSession} from "@/utilities/ProvidersSession";
 import React from "react";
 import {StoreProvider} from "@/store/StoreProvider";
 import {inter, geologica} from "@/styles/fonts";
+import {TheHeader} from "@/modules";
 require('dotenv').config();
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${geologica.variable}`}>
         <StoreProvider>
             <ProvidersSession>
-                <main>{children}</main>
+                <main> <TheHeader/> {children}</main>
             </ProvidersSession>
         </StoreProvider>
       </body>

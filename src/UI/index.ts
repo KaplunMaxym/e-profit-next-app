@@ -21,6 +21,7 @@ import PageDefault from "@/UI/Layouts/Page/DefaultPage/PageDefault";
 import Search from "@/UI/Inputs/search/Search";
 import SelectorLocation from "@/UI/Inputs/SelectorLocation/SelectorLocation";
 import BtnActionSecondary from "@/UI/Buttons/btnActionSecondary/btnActionSecondary";
+import MainPageLayout from "@/UI/Layouts/Page/MainPageLayout/MainPageLayout";
 import BtnApplySideLeftBar from "@/UI/Buttons/btnApplySideLeftBar/BtnApplySideLeftBar";
 import BtnClearFilters from "@/UI/Buttons/btnClearFilters/BtnClearFilters";
 export {
@@ -47,6 +48,7 @@ export {
     BtnActionPrimary,
     BtnActionSecondary,
     MainSecondatyText,
+    MainPageLayout,
     BtnApplySideLeftBar,
     BtnClearFilters,
 }
